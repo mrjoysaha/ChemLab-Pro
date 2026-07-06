@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reagent — reaction predictor</title>
+<meta name="description" content="Combine any two elements or compounds and see the balanced reaction they form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" id="indicatorRail" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Reaction Predictor</span>
+    <h1>Combine any two.<br>See what forms.</h1>
+    <p class="lede">Pick two of the 118 elements, or a common acid, base, oxide, carbonate or salt — Reagent works out the product and balances the equation for you.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="equation-card" aria-label="Reaction input">
+    <div class="equation-bar">
+      <div class="field">
+        <label for="inputA">Reactant 1</label>
+        <input id="inputA" type="text" list="compoundList" placeholder="Zn" autocomplete="off" spellcheck="false">
+      </div>
+      <span class="operator">+</span>
+      <div class="field">
+        <label for="inputB">Reactant 2</label>
+        <input id="inputB" type="text" list="compoundList" placeholder="H2SO4" autocomplete="off" spellcheck="false">
+      </div>
+      <button id="predictBtn" class="predict-btn">Predict <span class="arrow">→</span></button>
+    </div>
+    <datalist id="compoundList"></datalist>
+    <p class="hint">Try <button class="hint-fill" data-a="Zn" data-b="H2SO4">Zn + H2SO4</button>, <button class="hint-fill" data-a="NaOH" data-b="HCl">NaOH + HCl</button>, or <button class="hint-fill" data-a="CaCO3" data-b="HCl">CaCO3 + HCl</button></p>
+  </section>
+
+  <section id="resultSection" class="result-card" hidden aria-live="polite">
+    <div class="result-strip" id="resultStrip"></div>
+    <div class="result-body">
+      <div class="result-equation" id="resultEquation"></div>
+      <div class="result-meta">
+        <span class="result-label" id="resultLabel"></span>
+        <p class="result-note" id="resultNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="picker-section">
+    <h2 class="section-title">Quick picks</h2>
+    <div class="picker-groups" id="pickerGroups"></div>
+  </section>
+
+  <section class="browser-section">
+    <details id="elementDetails">
+      <summary>Browse all 118 elements</summary>
+      <div class="element-grid" id="elementGrid"></div>
+    </details>
+  </section>
+
+  <section class="scope-note">
+    <h2 class="section-title">What this covers</h2>
+    <ul>
+      <li>Reactive metal + acid → salt + hydrogen (using the standard reactivity series)</li>
+      <li>Reactive metal + water → metal hydroxide + hydrogen</li>
+      <li>Metal oxide + acid, or acidic oxide + base → salt + water</li>
+      <li>Acid + base → salt + water (neutralization)</li>
+      <li>Acid + carbonate/bicarbonate → salt + water + carbon dioxide</li>
+      <li>Metal + salt → single displacement, when the reactant metal is more reactive</li>
+      <li>Metal + non-metal → direct combination into an ionic compound</li>
+    </ul>
+    <p>It doesn't attempt organic chemistry, redox half-equations, or every possible oxidation state — for elements with several common charges it uses the simplest one taught at introductory level.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="chem.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
