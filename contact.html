@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Reagent</title>
+<meta name="description" content="Get in touch — questions, feedback, or corrections.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Get in touch</span>
+    <h1>Questions, corrections,<br>or just a hello.</h1>
+    <p class="lede">Found a reaction that doesn't balance right, or a topic you'd like added? Write in — every message gets read.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <form id="letterForm" class="contact-form">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+        <div class="contact-field">
+          <label for="name">Your Name<span class="req">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+        </div>
+
+        <div class="contact-two-col">
+          <div class="contact-field">
+            <label for="email">Your Email<span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+          <div class="contact-field">
+            <label for="address">Your Address</label>
+            <input type="text" id="address" name="address" placeholder="Optional">
+          </div>
+        </div>
+
+        <div class="contact-field">
+          <label for="message">Your Message<span class="req">*</span></label>
+          <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
+        </div>
+
+        <div class="contact-submit-row">
+          <span class="contact-sig">— the Reagent team</span>
+          <button type="submit" id="sendBtn" class="predict-btn">
+            <span class="btnText">Send message</span>
+          </button>
+        </div>
+
+        <div class="contact-status" id="statusMsg"></div>
+      </form>
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
+<script>
+  const form = document.getElementById('letterForm');
+  const btn = document.getElementById('sendBtn');
+  const btnText = btn.querySelector('.btnText');
+  const statusMsg = document.getElementById('statusMsg');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    btn.disabled = true;
+    btnText.textContent = 'Sending…';
+    statusMsg.textContent = '';
+    statusMsg.className = 'contact-status';
+
+    const formData = new FormData(form);
+    formData.append('access_key', 'XXXX-XXXX-XXXX'); // <-- replace with your Web3Forms key
+    formData.append('subject', 'New message from Reagent contact form');
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        statusMsg.textContent = 'Delivered. Thank you for writing.';
+        statusMsg.classList.add('ok');
+        form.reset();
+      } else {
+        statusMsg.textContent = 'The message did not go through. Please try again.';
+        statusMsg.classList.add('err');
+      }
+    } catch (err) {
+      statusMsg.textContent = 'Something went wrong. Check your connection and try again.';
+      statusMsg.classList.add('err');
+    } finally {
+      btn.disabled = false;
+      btnText.textContent = 'Send message';
+    }
+  });
+</script>
+
+</body>
+</html>
