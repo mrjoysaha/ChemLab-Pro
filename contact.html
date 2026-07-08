@@ -1,105 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Get in Touch</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!--
+  HOW TO USE IN BLOGGER
+  1. Blogger > Layout > Add a Gadget > HTML/JavaScript
+  2. Paste this ENTIRE file (all 3 sections below) into that one gadget box
+  3. Replace XXXX-XXXX-XXXX in the SCRIPT section with your real Web3Forms key
+  4. Save
+
+  This file has no <html>/<head>/<body> tags on purpose — Blogger gadgets
+  only accept a content fragment, and adding those tags is what was
+  breaking the layout before.
+-->
+
+<!-- ============================= 1. STYLE ============================= -->
 <style>
-  :root{
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  #letterWrap, #letterWrap *{
+    box-sizing:border-box;
+  }
+
+  #letterWrap{
     --ink:#1b263b;
     --ink-deep:#111826;
     --parchment:#f3ead9;
-    --parchment-dark:#e8dcc4;
     --stamp-red:#a8362f;
     --gold:#bd9a3f;
     --charcoal:#2b2620;
     --line:#c9b98f;
-  }
 
-  *{box-sizing:border-box;}
-
-  body{
-    margin:0;
-    min-height:100vh;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(189,154,63,0.08), transparent 45%),
-      radial-gradient(circle at 80% 85%, rgba(168,54,47,0.10), transparent 40%),
-      var(--ink);
-    font-family:'Source Serif 4', serif;
-    color:var(--charcoal);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:48px 20px;
-  }
-
-  .letter-wrap{
     width:100%;
     max-width:620px;
-    position:relative;
+    margin:0 auto;
+    padding:24px 16px 48px;
+    background:
+      radial-gradient(circle at 20% 10%, rgba(189,154,63,0.10), transparent 45%),
+      radial-gradient(circle at 80% 90%, rgba(168,54,47,0.12), transparent 40%),
+      var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    color:var(--charcoal);
+    border-radius:10px;
   }
 
-  .masthead{
+  #letterWrap .masthead{
     text-align:center;
     color:var(--parchment);
-    margin-bottom:28px;
+    margin-bottom:22px;
   }
 
-  .masthead .eyebrow{
+  #letterWrap .eyebrow{
     font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.35em;
+    font-size:11px;
+    letter-spacing:0.3em;
     text-transform:uppercase;
     color:var(--gold);
-    margin-bottom:10px;
+    margin-bottom:8px;
   }
 
-  .masthead h1{
-    font-family:'Fraunces', serif;
+  #letterWrap h1{
+    font-family:'Fraunces', Georgia, serif;
     font-weight:600;
-    font-size:clamp(32px, 6vw, 48px);
-    margin:0 0 10px;
+    font-size:clamp(26px, 7vw, 44px);
+    margin:0 0 8px;
+    line-height:1.1;
   }
 
-  .masthead p{
+  #letterWrap .sub{
     font-style:italic;
-    font-size:16px;
+    font-size:clamp(13px, 3.6vw, 16px);
     color:#cfd6e4;
-    max-width:420px;
+    max-width:400px;
     margin:0 auto;
+    line-height:1.5;
   }
 
-  .envelope{
+  #letterWrap .envelope{
     background:var(--parchment);
-    border-radius:4px;
+    border-radius:6px;
     position:relative;
-    padding:52px 44px 44px;
-    box-shadow:
-      0 30px 60px -20px rgba(0,0,0,0.55),
-      0 0 0 1px rgba(0,0,0,0.04);
-    background-image:
-      repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.025) 28px);
+    padding:36px 22px 28px;
+    box-shadow:0 20px 45px -18px rgba(0,0,0,0.55), 0 0 0 1px rgba(0,0,0,0.04);
+    background-image:repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.025) 28px);
+    overflow:hidden;
   }
 
-  .envelope::before{
+  #letterWrap .envelope::before{
     content:"";
     position:absolute;
     top:0; left:0; right:0;
-    height:14px;
+    height:10px;
     background:repeating-linear-gradient(-45deg, var(--stamp-red) 0 10px, var(--gold) 10px 20px);
-    border-radius:4px 4px 0 0;
     opacity:0.85;
   }
 
-  .stamp{
+  #letterWrap .stamp{
     position:absolute;
-    top:26px;
-    right:34px;
-    width:64px;
-    height:78px;
+    top:18px;
+    right:18px;
+    width:46px;
+    height:56px;
     border:2px dashed var(--gold);
     border-radius:2px;
     display:flex;
@@ -107,97 +104,105 @@
     justify-content:center;
     transform:rotate(4deg);
     background:rgba(189,154,63,0.06);
+    flex-shrink:0;
   }
 
-  .stamp svg{width:34px;height:34px;fill:var(--gold);}
+  #letterWrap .stamp svg{ width:24px; height:24px; fill:var(--gold); }
 
-  .field-label{
+  #letterWrap .field{ margin-bottom:20px; }
+
+  #letterWrap .field-label{
     display:block;
     font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:0.14em;
+    font-size:10.5px;
+    letter-spacing:0.12em;
     text-transform:uppercase;
     color:#6b5f4a;
-    margin-bottom:8px;
+    margin-bottom:7px;
   }
 
-  .field-label .req{ color:var(--stamp-red); margin-left:3px; }
+  #letterWrap .field-label .req{ color:var(--stamp-red); margin-left:3px; }
 
-  .field{
-    margin-bottom:26px;
-  }
-
-  input, textarea{
+  #letterWrap input,
+  #letterWrap textarea{
     width:100%;
     background:transparent;
     border:none;
     border-bottom:1.5px solid var(--line);
-    font-family:'Source Serif 4', serif;
-    font-size:17px;
+    font-family:'Source Serif 4', Georgia, serif;
+    font-size:16px; /* 16px minimum avoids iOS auto-zoom on focus */
     color:var(--charcoal);
-    padding:8px 2px 10px;
+    padding:9px 2px 10px;
     outline:none;
-    transition:border-color 0.25s ease, transform 0.25s ease;
+    transition:border-color 0.25s ease;
+    -webkit-appearance:none;
+    border-radius:0;
   }
 
-  textarea{ resize:vertical; min-height:96px; line-height:1.5; }
+  #letterWrap textarea{ resize:vertical; min-height:100px; line-height:1.5; }
 
-  input::placeholder, textarea::placeholder{
-    color:#a89f8c;
-    font-style:italic;
-  }
+  #letterWrap input::placeholder,
+  #letterWrap textarea::placeholder{ color:#a89f8c; font-style:italic; }
 
-  input:focus, textarea:focus{
-    border-bottom-color:var(--stamp-red);
-  }
+  #letterWrap input:focus,
+  #letterWrap textarea:focus{ border-bottom-color:var(--stamp-red); }
 
-  .two-col{
+  #letterWrap .two-col{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:0 28px;
+    gap:0 20px;
   }
 
-  @media (max-width:520px){
-    .two-col{ grid-template-columns:1fr; }
-    .envelope{ padding:44px 26px 34px; }
+  @media (max-width:480px){
+    #letterWrap .two-col{ grid-template-columns:1fr; gap:0; }
+    #letterWrap .stamp{ top:14px; right:14px; width:38px; height:46px; }
+    #letterWrap .envelope{ padding:32px 16px 24px; }
   }
 
-  .submit-row{
+  #letterWrap .submit-row{
     display:flex;
+    flex-wrap:wrap;
     align-items:center;
     justify-content:space-between;
-    margin-top:38px;
-    padding-top:22px;
+    gap:14px;
+    margin-top:30px;
+    padding-top:18px;
     border-top:1px dashed var(--line);
   }
 
-  .sig{
-    font-family:'Fraunces', serif;
+  #letterWrap .sig{
+    font-family:'Fraunces', Georgia, serif;
     font-style:italic;
-    font-size:14px;
+    font-size:13px;
     color:#8a7d63;
   }
 
-  button{
+  #letterWrap button{
     position:relative;
     font-family:'IBM Plex Mono', monospace;
-    letter-spacing:0.12em;
+    letter-spacing:0.1em;
     text-transform:uppercase;
     font-size:13px;
     color:var(--parchment);
     background:var(--ink);
     border:none;
-    padding:14px 28px;
+    padding:14px 26px;
     border-radius:2px;
     cursor:pointer;
     overflow:hidden;
     transition:transform 0.15s ease, background 0.2s ease;
+    min-height:44px; /* touch target */
+    width:100%;
   }
 
-  button:hover{ background:var(--ink-deep); }
-  button:active{ transform:scale(0.96); }
+  @media (min-width:420px){
+    #letterWrap button{ width:auto; }
+  }
 
-  button .postmark{
+  #letterWrap button:hover{ background:var(--ink-deep); }
+  #letterWrap button:active{ transform:scale(0.97); }
+
+  #letterWrap button .postmark{
     position:absolute;
     inset:0;
     border-radius:50%;
@@ -206,42 +211,38 @@
     opacity:0.9;
   }
 
-  button.stamping .postmark{
-    animation:stampDown 0.5s ease forwards;
-  }
+  #letterWrap button.stamping .postmark{ animation:stampDown 0.5s ease forwards; }
 
   @keyframes stampDown{
     0%{ transform:scale(0); border-radius:50%; }
-    60%{ transform:scale(2.2); border-radius:50%; }
-    100%{ transform:scale(2.6); border-radius:0; opacity:0; }
+    60%{ transform:scale(2.4); border-radius:50%; }
+    100%{ transform:scale(2.8); border-radius:0; opacity:0; }
   }
 
-  .status{
-    margin-top:16px;
+  #letterWrap .status{
+    margin-top:14px;
     font-family:'IBM Plex Mono', monospace;
-    font-size:12.5px;
-    letter-spacing:0.03em;
-    min-height:18px;
+    font-size:12px;
+    letter-spacing:0.02em;
+    min-height:16px;
   }
 
-  .status.ok{ color:#2f6b3a; }
-  .status.err{ color:var(--stamp-red); }
+  #letterWrap .status.ok{ color:#2f6b3a; }
+  #letterWrap .status.err{ color:var(--stamp-red); }
 
-  /* honeypot */
-  .hp{ position:absolute; left:-9999px; opacity:0; height:0; }
+  #letterWrap .hp{ position:absolute; left:-9999px; opacity:0; height:0; }
 
   @media (prefers-reduced-motion: reduce){
-    button.stamping .postmark{ animation:none; }
+    #letterWrap button.stamping .postmark{ animation:none; }
   }
 </style>
-</head>
-<body>
 
-<div class="letter-wrap">
+<!-- ============================= 2. BODY ============================== -->
+<div id="letterWrap">
   <div class="masthead">
     <div class="eyebrow">Correspondence</div>
     <h1>Write to Me</h1>
-    <p>Thoughts, questions, or just a hello — every letter gets read, and most get answered.</p>
+    <p class="sub">Thoughts, questions, or just a hello — every letter gets read, and most get answered.</p>
   </div>
 
   <div class="envelope">
@@ -253,46 +254,48 @@
       <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
 
       <div class="field">
-        <label class="field-label" for="name">Your Name<span class="req">*</span></label>
-        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+        <label class="field-label" for="letterName">Your Name<span class="req">*</span></label>
+        <input type="text" id="letterName" name="name" placeholder="Jane Doe" required>
       </div>
 
       <div class="two-col">
         <div class="field">
-          <label class="field-label" for="email">Your Email<span class="req">*</span></label>
-          <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          <label class="field-label" for="letterEmail">Your Email<span class="req">*</span></label>
+          <input type="email" id="letterEmail" name="email" placeholder="jane@example.com" required>
         </div>
         <div class="field">
-          <label class="field-label" for="address">Your Address</label>
-          <input type="text" id="address" name="address" placeholder="Optional">
+          <label class="field-label" for="letterAddress">Your Address</label>
+          <input type="text" id="letterAddress" name="address" placeholder="Optional">
         </div>
       </div>
 
       <div class="field">
-        <label class="field-label" for="message">Your Message<span class="req">*</span></label>
-        <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
+        <label class="field-label" for="letterMessage">Your Message<span class="req">*</span></label>
+        <textarea id="letterMessage" name="message" placeholder="What's on your mind?" required></textarea>
       </div>
 
       <div class="submit-row">
         <span class="sig">— yours truly</span>
-        <button type="submit" id="sendBtn">
+        <button type="submit" id="letterSendBtn">
           <span class="postmark"></span>
           <span class="btnText">Send Letter</span>
         </button>
       </div>
 
-      <div class="status" id="statusMsg"></div>
+      <div class="status" id="letterStatus"></div>
     </form>
   </div>
 </div>
 
+<!-- ============================= 3. SCRIPT ============================= -->
 <script>
-  const form = document.getElementById('letterForm');
-  const btn = document.getElementById('sendBtn');
-  const btnText = btn.querySelector('.btnText');
-  const statusMsg = document.getElementById('statusMsg');
+(function(){
+  var form = document.getElementById('letterForm');
+  var btn = document.getElementById('letterSendBtn');
+  var btnText = btn.querySelector('.btnText');
+  var statusMsg = document.getElementById('letterStatus');
 
-  form.addEventListener('submit', async function (e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     btn.classList.add('stamping');
@@ -301,17 +304,16 @@
     statusMsg.textContent = '';
     statusMsg.className = 'status';
 
-    const formData = new FormData(form);
+    var formData = new FormData(form);
     formData.append('access_key', 'XXXX-XXXX-XXXX'); // <-- replace with your Web3Forms key
     formData.append('subject', 'New message from your blog contact form');
 
-    try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-      });
-      const result = await res.json();
-
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(function(res){ return res.json(); })
+    .then(function(result){
       if (result.success) {
         statusMsg.textContent = 'Delivered. Thank you for writing.';
         statusMsg.classList.add('ok');
@@ -320,16 +322,16 @@
         statusMsg.textContent = 'The letter did not go through. Please try again.';
         statusMsg.classList.add('err');
       }
-    } catch (err) {
+    })
+    .catch(function(){
       statusMsg.textContent = 'Something went wrong. Check your connection and try again.';
       statusMsg.classList.add('err');
-    } finally {
+    })
+    .finally(function(){
       btn.disabled = false;
       btnText.textContent = 'Send Letter';
-      setTimeout(() => btn.classList.remove('stamping'), 600);
-    }
+      setTimeout(function(){ btn.classList.remove('stamping'); }, 600);
+    });
   });
+})();
 </script>
-
-</body>
-</html>
