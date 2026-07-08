@@ -1,337 +1,174 @@
-<!--
-  HOW TO USE IN BLOGGER
-  1. Blogger > Layout > Add a Gadget > HTML/JavaScript
-  2. Paste this ENTIRE file (all 3 sections below) into that one gadget box
-  3. Replace XXXX-XXXX-XXXX in the SCRIPT section with your real Web3Forms key
-  4. Save
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Reagent</title>
+<meta name="description" content="Get in touch — questions, feedback, or corrections.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-  This file has no <html>/<head>/<body> tags on purpose — Blogger gadgets
-  only accept a content fragment, and adding those tags is what was
-  breaking the layout before.
--->
+<div class="indicator-rail" aria-hidden="true"></div>
 
-<!-- ============================= 1. STYLE ============================= -->
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
-  #letterWrap, #letterWrap *{
-    box-sizing:border-box;
-  }
-
-  #letterWrap{
-    --ink:#1b263b;
-    --ink-deep:#111826;
-    --parchment:#f3ead9;
-    --stamp-red:#a8362f;
-    --gold:#bd9a3f;
-    --charcoal:#2b2620;
-    --line:#c9b98f;
-
-    width:100%;
-    max-width:620px;
-    margin:0 auto;
-    padding:24px 16px 48px;
-    background:
-      radial-gradient(circle at 20% 10%, rgba(189,154,63,0.10), transparent 45%),
-      radial-gradient(circle at 80% 90%, rgba(168,54,47,0.12), transparent 40%),
-      var(--ink);
-    font-family:'Source Serif 4', Georgia, serif;
-    color:var(--charcoal);
-    border-radius:10px;
-  }
-
-  #letterWrap .masthead{
-    text-align:center;
-    color:var(--parchment);
-    margin-bottom:22px;
-  }
-
-  #letterWrap .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:11px;
-    letter-spacing:0.3em;
-    text-transform:uppercase;
-    color:var(--gold);
-    margin-bottom:8px;
-  }
-
-  #letterWrap h1{
-    font-family:'Fraunces', Georgia, serif;
-    font-weight:600;
-    font-size:clamp(26px, 7vw, 44px);
-    margin:0 0 8px;
-    line-height:1.1;
-  }
-
-  #letterWrap .sub{
-    font-style:italic;
-    font-size:clamp(13px, 3.6vw, 16px);
-    color:#cfd6e4;
-    max-width:400px;
-    margin:0 auto;
-    line-height:1.5;
-  }
-
-  #letterWrap .envelope{
-    background:var(--parchment);
-    border-radius:6px;
-    position:relative;
-    padding:36px 22px 28px;
-    box-shadow:0 20px 45px -18px rgba(0,0,0,0.55), 0 0 0 1px rgba(0,0,0,0.04);
-    background-image:repeating-linear-gradient(0deg, transparent, transparent 27px, rgba(0,0,0,0.025) 28px);
-    overflow:hidden;
-  }
-
-  #letterWrap .envelope::before{
-    content:"";
-    position:absolute;
-    top:0; left:0; right:0;
-    height:10px;
-    background:repeating-linear-gradient(-45deg, var(--stamp-red) 0 10px, var(--gold) 10px 20px);
-    opacity:0.85;
-  }
-
-  #letterWrap .stamp{
-    position:absolute;
-    top:18px;
-    right:18px;
-    width:46px;
-    height:56px;
-    border:2px dashed var(--gold);
-    border-radius:2px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transform:rotate(4deg);
-    background:rgba(189,154,63,0.06);
-    flex-shrink:0;
-  }
-
-  #letterWrap .stamp svg{ width:24px; height:24px; fill:var(--gold); }
-
-  #letterWrap .field{ margin-bottom:20px; }
-
-  #letterWrap .field-label{
-    display:block;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:10.5px;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:#6b5f4a;
-    margin-bottom:7px;
-  }
-
-  #letterWrap .field-label .req{ color:var(--stamp-red); margin-left:3px; }
-
-  #letterWrap input,
-  #letterWrap textarea{
-    width:100%;
-    background:transparent;
-    border:none;
-    border-bottom:1.5px solid var(--line);
-    font-family:'Source Serif 4', Georgia, serif;
-    font-size:16px; /* 16px minimum avoids iOS auto-zoom on focus */
-    color:var(--charcoal);
-    padding:9px 2px 10px;
-    outline:none;
-    transition:border-color 0.25s ease;
-    -webkit-appearance:none;
-    border-radius:0;
-  }
-
-  #letterWrap textarea{ resize:vertical; min-height:100px; line-height:1.5; }
-
-  #letterWrap input::placeholder,
-  #letterWrap textarea::placeholder{ color:#a89f8c; font-style:italic; }
-
-  #letterWrap input:focus,
-  #letterWrap textarea:focus{ border-bottom-color:var(--stamp-red); }
-
-  #letterWrap .two-col{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0 20px;
-  }
-
-  @media (max-width:480px){
-    #letterWrap .two-col{ grid-template-columns:1fr; gap:0; }
-    #letterWrap .stamp{ top:14px; right:14px; width:38px; height:46px; }
-    #letterWrap .envelope{ padding:32px 16px 24px; }
-  }
-
-  #letterWrap .submit-row{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:space-between;
-    gap:14px;
-    margin-top:30px;
-    padding-top:18px;
-    border-top:1px dashed var(--line);
-  }
-
-  #letterWrap .sig{
-    font-family:'Fraunces', Georgia, serif;
-    font-style:italic;
-    font-size:13px;
-    color:#8a7d63;
-  }
-
-  #letterWrap button{
-    position:relative;
-    font-family:'IBM Plex Mono', monospace;
-    letter-spacing:0.1em;
-    text-transform:uppercase;
-    font-size:13px;
-    color:var(--parchment);
-    background:var(--ink);
-    border:none;
-    padding:14px 26px;
-    border-radius:2px;
-    cursor:pointer;
-    overflow:hidden;
-    transition:transform 0.15s ease, background 0.2s ease;
-    min-height:44px; /* touch target */
-    width:100%;
-  }
-
-  @media (min-width:420px){
-    #letterWrap button{ width:auto; }
-  }
-
-  #letterWrap button:hover{ background:var(--ink-deep); }
-  #letterWrap button:active{ transform:scale(0.97); }
-
-  #letterWrap button .postmark{
-    position:absolute;
-    inset:0;
-    border-radius:50%;
-    background:var(--stamp-red);
-    transform:scale(0);
-    opacity:0.9;
-  }
-
-  #letterWrap button.stamping .postmark{ animation:stampDown 0.5s ease forwards; }
-
-  @keyframes stampDown{
-    0%{ transform:scale(0); border-radius:50%; }
-    60%{ transform:scale(2.4); border-radius:50%; }
-    100%{ transform:scale(2.8); border-radius:0; opacity:0; }
-  }
-
-  #letterWrap .status{
-    margin-top:14px;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    letter-spacing:0.02em;
-    min-height:16px;
-  }
-
-  #letterWrap .status.ok{ color:#2f6b3a; }
-  #letterWrap .status.err{ color:var(--stamp-red); }
-
-  #letterWrap .hp{ position:absolute; left:-9999px; opacity:0; height:0; }
-
-  @media (prefers-reduced-motion: reduce){
-    #letterWrap button.stamping .postmark{ animation:none; }
-  }
-</style>
-
-<!-- ============================= 2. BODY ============================== -->
-<div id="letterWrap">
-  <div class="masthead">
-    <div class="eyebrow">Correspondence</div>
-    <h1>Write to Me</h1>
-    <p class="sub">Thoughts, questions, or just a hello — every letter gets read, and most get answered.</p>
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</header>
 
-  <div class="envelope">
-    <div class="stamp" aria-hidden="true">
-      <svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7l-9-5zm0 2.2 7 3.9v.1l-7 3.9-7-3.9v-.1l7-3.9zM5 9.9l6 3.4v6.4l-6-3.3V9.9zm14 0v6.5l-6 3.3v-6.4l6-3.4z"/></svg>
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
     </div>
 
-    <form id="letterForm">
-      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
 
-      <div class="field">
-        <label class="field-label" for="letterName">Your Name<span class="req">*</span></label>
-        <input type="text" id="letterName" name="name" placeholder="Jane Doe" required>
-      </div>
-
-      <div class="two-col">
-        <div class="field">
-          <label class="field-label" for="letterEmail">Your Email<span class="req">*</span></label>
-          <input type="email" id="letterEmail" name="email" placeholder="jane@example.com" required>
-        </div>
-        <div class="field">
-          <label class="field-label" for="letterAddress">Your Address</label>
-          <input type="text" id="letterAddress" name="address" placeholder="Optional">
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="field-label" for="letterMessage">Your Message<span class="req">*</span></label>
-        <textarea id="letterMessage" name="message" placeholder="What's on your mind?" required></textarea>
-      </div>
-
-      <div class="submit-row">
-        <span class="sig">— yours truly</span>
-        <button type="submit" id="letterSendBtn">
-          <span class="postmark"></span>
-          <span class="btnText">Send Letter</span>
-        </button>
-      </div>
-
-      <div class="status" id="letterStatus"></div>
-    </form>
+    <a href="contact.html" class="drawer-link">Contact</a>
   </div>
-</div>
+</nav>
 
-<!-- ============================= 3. SCRIPT ============================= -->
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Get in touch</span>
+    <h1>Questions, corrections,<br>or just a hello.</h1>
+    <p class="lede">Found a reaction that doesn't balance right, or a topic you'd like added? Write in — every message gets read.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <form id="letterForm" class="contact-form">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+        <div class="contact-field">
+          <label for="name">Your Name<span class="req">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+        </div>
+
+        <div class="contact-two-col">
+          <div class="contact-field">
+            <label for="email">Your Email<span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+          <div class="contact-field">
+            <label for="address">Your Address</label>
+            <input type="text" id="address" name="address" placeholder="Optional">
+          </div>
+        </div>
+
+        <div class="contact-field">
+          <label for="message">Your Message<span class="req">*</span></label>
+          <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
+        </div>
+
+        <div class="contact-submit-row">
+          <span class="contact-sig">— the Reagent team</span>
+          <button type="submit" id="sendBtn" class="predict-btn">
+            <span class="btnText">Send message</span>
+          </button>
+        </div>
+
+        <div class="contact-status" id="statusMsg"></div>
+      </form>
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
 <script>
-(function(){
-  var form = document.getElementById('letterForm');
-  var btn = document.getElementById('letterSendBtn');
-  var btnText = btn.querySelector('.btnText');
-  var statusMsg = document.getElementById('letterStatus');
+  const form = document.getElementById('letterForm');
+  const btn = document.getElementById('sendBtn');
+  const btnText = btn.querySelector('.btnText');
+  const statusMsg = document.getElementById('statusMsg');
 
-  form.addEventListener('submit', function (e) {
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    btn.classList.add('stamping');
     btn.disabled = true;
     btnText.textContent = 'Sending…';
     statusMsg.textContent = '';
-    statusMsg.className = 'status';
+    statusMsg.className = 'contact-status';
 
-    var formData = new FormData(form);
+    const formData = new FormData(form);
     formData.append('access_key', 'XXXX-XXXX-XXXX'); // <-- replace with your Web3Forms key
-    formData.append('subject', 'New message from your blog contact form');
+    formData.append('subject', 'New message from Reagent contact form');
 
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: formData
-    })
-    .then(function(res){ return res.json(); })
-    .then(function(result){
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+      const result = await res.json();
+
       if (result.success) {
         statusMsg.textContent = 'Delivered. Thank you for writing.';
         statusMsg.classList.add('ok');
         form.reset();
       } else {
-        statusMsg.textContent = 'The letter did not go through. Please try again.';
+        statusMsg.textContent = 'The message did not go through. Please try again.';
         statusMsg.classList.add('err');
       }
-    })
-    .catch(function(){
+    } catch (err) {
       statusMsg.textContent = 'Something went wrong. Check your connection and try again.';
       statusMsg.classList.add('err');
-    })
-    .finally(function(){
+    } finally {
       btn.disabled = false;
-      btnText.textContent = 'Send Letter';
-      setTimeout(function(){ btn.classList.remove('stamping'); }, 600);
-    });
+      btnText.textContent = 'Send message';
+    }
   });
-})();
 </script>
+
+</body>
+</html>
