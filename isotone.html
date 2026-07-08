@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isotone — Reagent</title>
+<meta name="description" content="Atoms of different elements that share the same number of neutrons.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Atomic Structure</span>
+    <h1>Isotone</h1>
+    <p class="lede">Atoms of different elements that share the same number of neutrons.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <span class="info-kicker">Atomic Structure</span>
+      <h2>Isotone</h2>
+      <p class="lede">What isotones are and why they share neutron counts.</p>
+
+      <div class="concept-section">
+        <h3>What is an Isotone?</h3>
+        <p><strong>Isotones</strong> are nuclides (different types of atoms) that have the <strong>same number of neutrons</strong> (<i>N</i>) in their nuclei, but a <strong>different number of protons</strong> (different atomic number <i>Z</i>) and a different mass number (<i>A</i>).</p>
+        <p>Because they have different atomic numbers, isotones represent <strong>completely different chemical elements</strong>. Consequently, they share absolutely no similarities in chemical properties, unlike isotopes. They are grouped together solely based on their neutron counts, which is useful in nuclear physics for studying nuclear stability shell models.</p>
+        
+        <div class="theory-block">
+          <strong>Neutron Count Formula:</strong>
+          <p style="margin: 6px 0 0; font-family: var(--mono); font-size: 15px; text-align: center; color: var(--teal)">
+            Neutrons (N) = Mass Number (A) - Protons (Z)
+          </p>
+        </div>
+      </div>
+
+      <div class="concept-section">
+        <h3>Detailed Examples</h3>
+        
+        <div class="example-card">
+          <span class="example-card-title">Example 1: The N = 8 Isotone Group</span>
+          <p>These three distinct nuclides are isotones because they all contain exactly <strong>8 neutrons</strong>:</p>
+          <ul class="concept-list">
+            <li><strong>Carbon-14 (<sup>14</sup><sub>6</sub>C)</strong>: Protons (<i>Z</i>) = 6, Mass (<i>A</i>) = 14. Neutrons (<i>N</i>) = 14 - 6 = 8.</li>
+            <li><strong>Nitrogen-15 (<sup>15</sup><sub>7</sub>N)</strong>: Protons (<i>Z</i>) = 7, Mass (<i>A</i>) = 15. Neutrons (<i>N</i>) = 15 - 7 = 8.</li>
+            <li><strong>Oxygen-16 (<sup>16</sup><sub>8</sub>O)</strong>: Protons (<i>Z</i>) = 8, Mass (<i>A</i>) = 16. Neutrons (<i>N</i>) = 16 - 8 = 8.</li>
+          </ul>
+          <p>Carbon is a solid metal-like nonmetal, Nitrogen is a diatomic gas making up 78% of our atmosphere, and Oxygen is a highly reactive gas supporting life. Their chemical behaviors are totally distinct, yet their nuclei contain the same number of neutrons.</p>
+        </div>
+
+        <div class="example-card">
+          <span class="example-card-title">Example 2: The N = 16 Isotone Group</span>
+          <p>Another classic series showing elements from Periods 3:</p>
+          <ul class="concept-list">
+            <li><strong>Silicon-30 (<sup>30</sup><sub>14</sub>Si)</strong>: Neutrons (<i>N</i>) = 30 - 14 = 16.</li>
+            <li><strong>Phosphorus-31 (<sup>31</sup><sub>15</sub>P)</strong>: Neutrons (<i>N</i>) = 31 - 15 = 16.</li>
+            <li><strong>Sulfur-32 (<sup>32</sup><sub>16</sub>S)</strong>: Neutrons (<i>N</i>) = 32 - 16 = 16.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="science-widget" id="isotoneWidget">
+        <div class="widget-header">
+          <h4 class="widget-title">Isotone Matching Tool</h4>
+          <span class="widget-badge" id="neutronBadge">N = 8 Group</span>
+        </div>
+        <div class="widget-body">
+          <div class="widget-controls">
+            <div class="widget-field">
+              <label for="neutSelect">Select Neutron Number (N)</label>
+              <select id="neutSelect" class="widget-select">
+                <option value="1">N = 1</option>
+                <option value="2">N = 2</option>
+                <option value="6">N = 6</option>
+                <option value="8" selected>N = 8</option>
+                <option value="10">N = 10</option>
+                <option value="12">N = 12</option>
+                <option value="16">N = 16</option>
+                <option value="20">N = 20</option>
+              </select>
+            </div>
+          </div>
+
+          <div id="isotoneList" style="display: flex; flex-direction: column; gap: 10px;">
+            <!-- Dynamically populated matches -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const data = [
+      { n: 1, isotopes: [{ a: 2, z: 1, sym: "H", name: "Hydrogen-2" }, { a: 3, z: 2, sym: "He", name: "Helium-3" }] },
+      { n: 2, isotopes: [{ a: 3, z: 1, sym: "H", name: "Hydrogen-3" }, { a: 4, z: 2, sym: "He", name: "Helium-4" }, { a: 5, z: 3, sym: "Lithium-5" }] },
+      { n: 6, isotopes: [{ a: 11, z: 5, sym: "B", name: "Boron-11" }, { a: 12, z: 6, sym: "C", name: "Carbon-12" }, { a: 13, z: 7, sym: "N", name: "Nitrogen-13" }] },
+      { n: 8, isotopes: [{ a: 14, z: 6, sym: "C", name: "Carbon-14" }, { a: 15, z: 7, sym: "N", name: "Nitrogen-15" }, { a: 16, z: 8, sym: "O", name: "Oxygen-16" }] },
+      { n: 10, isotopes: [{ a: 18, z: 8, sym: "O", name: "Oxygen-18" }, { a: 19, z: 9, sym: "F", name: "Fluorine-19" }, { a: 20, z: 10, sym: "Ne", name: "Neon-20" }] },
+      { n: 12, isotopes: [{ a: 23, z: 11, sym: "Na", name: "Sodium-23" }, { a: 24, z: 12, sym: "Mg", name: "Magnesium-24" }, { a: 25, z: 13, sym: "Aluminum-25" }] },
+      { n: 16, isotopes: [{ a: 30, z: 14, sym: "Si", name: "Silicon-30" }, { a: 31, z: 15, sym: "P", name: "Phosphorus-31" }, { a: 32, z: 16, sym: "S", name: "Sulfur-32" }] },
+      { n: 20, isotopes: [{ a: 37, z: 17, sym: "Cl", name: "Chlorine-37" }, { a: 38, z: 18, sym: "Ar", name: "Argon-38" }, { a: 39, z: 19, sym: "K", name: "Potassium-39" }, { a: 40, z: 20, sym: "Ca", name: "Calcium-40" }] }
+    ];
+
+    const select = document.getElementById("neutSelect");
+    const container = document.getElementById("isotoneList");
+
+    function updateIsotones(n) {
+      container.innerHTML = "";
+      document.getElementById("neutronBadge").textContent = `N = ${n} Group`;
+
+      const group = data.find(g => g.n == n);
+      if (!group) return;
+
+      group.isotopes.forEach(iso => {
+        const item = document.createElement("div");
+        item.className = "widget-output-panel";
+        item.style.padding = "14px 18px";
+        item.innerHTML = `
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <span style="font-family:var(--mono); font-size:18px; font-weight:700; color:var(--teal); margin-right:8px;">
+                <sup>${iso.a}</sup><sub>${iso.z}</sub>${iso.sym}
+              </span>
+              <span style="font-weight:600; font-size:14.5px;">${iso.name}</span>
+            </div>
+            <div style="font-family:var(--mono); font-size:12.5px; color:var(--ink-soft);">
+              A (${iso.a}) - Z (${iso.z}) = <strong style="color:var(--gold); font-size:14px;">${n} Neutrons</strong>
+            </div>
+          </div>
+        `;
+        container.appendChild(item);
+      });
+    }
+
+    select.addEventListener("change", (e) => {
+      updateIsotones(parseInt(e.target.value));
+    });
+
+    // Init
+    updateIsotones(8);
+  });
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newland's Octave Rule — Reagent</title>
+<meta name="description" content="The law of octaves and its place in the history of the periodic table.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Periodic Table</span>
+    <h1>Newland's Octave Rule</h1>
+    <p class="lede">The law of octaves and its place in the history of the periodic table.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <span class="info-kicker">Periodic Table</span>
+      <h2>Newland's Octave Rule</h2>
+      <p class="lede">The law of octaves and early periodicity.</p>
+
+      <div class="concept-section">
+        <h3>Historical Context</h3>
+        <p>In 1865, English chemist <strong>John Newlands</strong> proposed a classification system for elements. By this time, elements were beginning to be identified in greater numbers, and Newlands arranged the 56 known elements in ascending order of their atomic weights.</p>
+        
+        <h4>The Law of Octaves</h4>
+        <p>Newlands observed a repeating pattern: <em>"When elements are arranged in increasing order of their atomic masses, the properties of every eighth element are a repetition of the properties of the first element."</em></p>
+        <p>Newlands drew a direct analogy to the octaves in music (where every eighth note on a scale is the same note, just an octave higher: Do-Re-Mi-Fa-Sol-La-Ti-Do or Sa-Re-Ga-Ma-Pa-Dha-Ni-Sa).</p>
+      </div>
+
+      <div class="concept-section">
+        <h3>Newlands' Octave Grid</h3>
+        <p>He arranged the elements in horizontal rows of seven, creating columns of similar elements:</p>
+        <div class="widget-output-panel" style="overflow-x:auto; margin:16px 0;">
+          <table style="width:100%; border-collapse:collapse; font-family:var(--mono); font-size:12.5px; text-align:center;">
+            <thead>
+              <tr style="border-bottom:1.5px solid var(--line); font-weight:700;">
+                <th style="padding:6px;">Sa (1)</th>
+                <th style="padding:6px;">Re (2)</th>
+                <th style="padding:6px;">Ga (3)</th>
+                <th style="padding:6px;">Ma (4)</th>
+                <th style="padding:6px;">Pa (5)</th>
+                <th style="padding:6px;">Dha (6)</th>
+                <th style="padding:6px;">Ni (7)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px dashed var(--line);">
+                <td style="padding:6px; color:var(--teal)">H</td>
+                <td style="padding:6px;">Li</td>
+                <td style="padding:6px;">Be</td>
+                <td style="padding:6px;">B</td>
+                <td style="padding:6px;">C</td>
+                <td style="padding:6px;">N</td>
+                <td style="padding:6px;">O</td>
+              </tr>
+              <tr style="border-bottom:1px dashed var(--line);">
+                <td style="padding:6px; color:var(--teal)">F</td>
+                <td style="padding:6px;">Na</td>
+                <td style="padding:6px;">Mg</td>
+                <td style="padding:6px;">Al</td>
+                <td style="padding:6px;">Si</td>
+                <td style="padding:6px;">P</td>
+                <td style="padding:6px;">S</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:6px; color:var(--teal)">Cl</td>
+                <td style="padding:6px;">K</td>
+                <td style="padding:6px;">Ca</td>
+                <td style="padding:6px; filter:opacity(0.4)">Cr</td>
+                <td style="padding:6px; filter:opacity(0.4)">Ti</td>
+                <td style="padding:6px; filter:opacity(0.4)">Mn</td>
+                <td style="padding:6px; filter:opacity(0.4)">Fe</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="concept-section">
+        <h3>Detailed Examples</h3>
+        
+        <div class="example-card">
+          <span class="example-card-title">Example 1: The First Octave (Li and Na)</span>
+          <p>Starting from Lithium (Li) as Element 1:</p>
+          <p class="formula">1: Li → 2: Be → 3: B → 4: C → 5: N → 6: O → 7: F → 8: Na</p>
+          <p>Sodium (Na) is the 8th element. Both are alkali metals that are extremely soft, light, and reactive. Similarly, Potassium (K) is the 8th element after Sodium, sharing the same properties.</p>
+        </div>
+
+        <div class="example-card">
+          <span class="example-card-title">Critical Failures: Post-Calcium elements</span>
+          <p>After Calcium (Ca), the law broke down completely. For example, chromium (Cr) is placed under aluminum (Al), yet chromium is a transition metal with multiple oxidation states and does not react like the group 13 semimetal boron or metal aluminum.</p>
+        </div>
+      </div>
+
+      <div class="concept-section">
+        <h3>Limitations of the Octave Rule</h3>
+        <p>Newlands' peers ridiculed his musical analogy, and the Chemical Society refused to publish his paper initially. Key limitations include:</p>
+        <ul class="concept-list">
+          <li><strong>Applicable Only to Calcium</strong>: The periodicity worked reasonably well for the first 17 elements (up to Calcium), but failed completely for heavier elements.</li>
+          <li><strong>Rigid assumptions</strong>: He assumed only 56 elements would ever exist and left no gaps for undiscovered elements.</li>
+          <li><strong>Noble Gas Discovery</strong>: The discovery of Helium, Neon, and Argon added a new group (noble gases), meaning properties now repeated every <strong>ninth</strong> element, destroying the octave model.</li>
+        </ul>
+      </div>
+
+      <div class="science-widget" id="octaveWidget">
+        <div class="widget-header">
+          <h4 class="widget-title">Chemical Piano Keyboard</h4>
+          <span class="widget-badge" id="octaveNoteBadge">Select a Key</span>
+        </div>
+        <div class="widget-body">
+          <p style="font-size: 13.5px; color: var(--ink-soft); margin: 0 0 10px;">
+            Click a key to play its synthesized frequency and highlight its octave partners. Watch how the pattern breaks down after Calcium (Ca).
+          </p>
+
+          <div class="octave-keyboard-wrap">
+            <div class="octave-keyboard" id="pianoKeys">
+              <!-- Dynamically populated keys -->
+            </div>
+          </div>
+
+          <div class="widget-output-panel">
+            <div class="widget-row">
+              <span class="widget-row-label">Octave Group Elements</span>
+              <span class="widget-row-val" id="octaveList" style="color:var(--teal)">-</span>
+            </div>
+            <div class="widget-row" style="border-bottom:none">
+              <span class="widget-row-label">Octave Status</span>
+              <span class="widget-row-val" id="octaveStatus">Click a key to explore</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const keysData = [
+      { sym: "H", z: 1, note: "Do", freq: 261.63, col: 1 },
+      { sym: "Li", z: 3, note: "Re", freq: 293.66, col: 2 },
+      { sym: "Be", z: 4, note: "Mi", freq: 329.63, col: 3 },
+      { sym: "B", z: 5, note: "Fa", freq: 349.23, col: 4 },
+      { sym: "C", z: 6, note: "Sol", freq: 392.00, col: 5 },
+      { sym: "N", z: 7, note: "La", freq: 440.00, col: 6 },
+      { sym: "O", z: 8, note: "Ti", freq: 493.88, col: 7 },
+      
+      { sym: "F", z: 9, note: "Do'", freq: 523.25, col: 1 },
+      { sym: "Na", z: 11, note: "Re'", freq: 587.33, col: 2 },
+      { sym: "Mg", z: 12, note: "Mi'", freq: 659.25, col: 3 },
+      { sym: "Al", z: 13, note: "Fa'", freq: 698.46, col: 4 },
+      { sym: "Si", z: 14, note: "Sol'", freq: 783.99, col: 5 },
+      { sym: "P", z: 15, note: "La'", freq: 880.00, col: 6 },
+      { sym: "S", z: 16, note: "Ti'", freq: 987.77, col: 7 },
+      
+      { sym: "Cl", z: 17, note: "Do''", freq: 1046.50, col: 1 },
+      { sym: "K", z: 19, note: "Re''", freq: 1174.66, col: 2 },
+      { sym: "Ca", z: 20, note: "Mi''", freq: 1318.51, col: 3 }
+    ];
+
+    const piano = document.getElementById("pianoKeys");
+
+    // Audio Context Synthesizer
+    let audioCtx = null;
+    function playNote(freq) {
+      try {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.6);
+        
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.6);
+      } catch (err) {
+        console.warn("Audio Context blocked or not supported:", err);
+      }
+    }
+
+    // Render Keys
+    keysData.forEach(key => {
+      const keyDiv = document.createElement("div");
+      keyDiv.className = "octave-key";
+      keyDiv.dataset.sym = key.sym;
+      keyDiv.dataset.col = key.col;
+      keyDiv.dataset.freq = key.freq;
+      keyDiv.innerHTML = `
+        <span class="octave-key-num">Z=${key.z}</span>
+        <span class="octave-key-sym">${key.sym}</span>
+        <span class="octave-key-note">${key.note}</span>
+      `;
+      piano.appendChild(keyDiv);
+
+      keyDiv.addEventListener("click", () => {
+        // Highlight active key and column
+        document.querySelectorAll(".octave-key").forEach(k => k.classList.remove("active"));
+        keyDiv.classList.add("active");
+
+        const groupKeys = keysData.filter(kd => kd.col === key.col);
+        const groupSymbols = groupKeys.map(kd => kd.sym).join(" — ");
+        
+        document.getElementById("octaveList").textContent = groupSymbols;
+        document.getElementById("octaveNoteBadge").textContent = `Column ${key.col} (${key.note})`;
+
+        const statusEl = document.getElementById("octaveStatus");
+        
+        if (key.z > 20 || (key.sym === "Ca" || key.sym === "K" || key.sym === "Cl")) {
+          if (key.sym === "Ca") {
+            statusEl.innerHTML = `<span style="color:var(--red); font-weight:700">Breakdown Point!</span> Calcium is the last element obeying the rule. The next element in this column would be Chromium, which is a transition metal and does not match the properties of Be or Mg.`;
+          } else {
+            statusEl.innerHTML = `<span style="color:var(--teal)">Rule holds:</span> ${key.sym} behaves similarly to its column partner(s).`;
+          }
+        } else {
+          statusEl.innerHTML = `<span style="color:var(--teal)">Rule holds:</span> ${key.sym} matches properties of other members in Column ${key.col}.`;
+        }
+
+        // Highlight column partners
+        document.querySelectorAll(".octave-key").forEach(k => {
+          if (parseInt(k.dataset.col) === key.col) {
+            k.classList.add("active");
+          }
+        });
+
+        playNote(key.freq);
+      });
+    });
+  });
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

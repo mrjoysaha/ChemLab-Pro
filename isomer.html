@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isomer — Reagent</title>
+<meta name="description" content="Nuclei with the same atomic and mass number but different energy states.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Atomic Structure</span>
+    <h1>Isomer</h1>
+    <p class="lede">Nuclei with the same atomic and mass number but different energy states.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <span class="info-kicker">Atomic Structure</span>
+      <h2>Isomer</h2>
+      <p class="lede">What isomers are and how nuclear and chemical isomers differ.</p>
+
+      <div class="concept-section">
+        <h3>The Dual Meanings of "Isomer"</h3>
+        <p>In science, the word <strong>isomer</strong> (from Greek <em>isos</em> "equal" + <em>meros</em> "part") is used in two very distinct contexts depending on whether you are studying the structure of the atomic nucleus or the structure of molecules:</p>
+        
+        <ol class="concept-list">
+          <li><strong>Nuclear Isomers</strong>: States of the same atomic nucleus (same atomic number \(Z\) and same mass number \(A\)) that exist in different energy states. One state is the stable ground state, and the other is a long-lived excited state called a "meta-stable" state.</li>
+          <li><strong>Chemical Isomers</strong>: Molecules that have the exact same molecular formula (same number of each atom type) but have different structural arrangements, bonding sequences, or shapes.</li>
+        </ol>
+      </div>
+
+      <div class="concept-section">
+        <h3>Nuclear Isomers</h3>
+        <p>A nuclear isomer is a meta-stable state of an atomic nucleus caused by the excitation of one or more nucleons (protons or neutrons) to a higher energy level. These meta-stable isomers are designated with a letter "m" next to their mass number (e.g., \(^{99m}\text{Tc}\)).</p>
+        <p>Unlike standard excited states that decay in fractions of a nanosecond, meta-stable nuclear isomers can persist for hours or even days. They eventually return to the ground state through a process called <strong>isomeric transition</strong>, emitting energy in the form of a gamma-ray photon (\(\gamma\)) without changing their atomic or mass numbers.</p>
+      </div>
+
+      <div class="concept-section">
+        <h3>Chemical Isomers</h3>
+        <p>In chemistry, isomers are split into two major categories:</p>
+        <ul class="concept-list">
+          <li><strong>Structural (Constitutional) Isomers</strong>: Atoms are bonded in completely different orders. For example, the chain arrangement of carbons can be straight or branched.</li>
+          <li><strong>Stereoisomers</strong>: Atoms have the same bonding sequence but differ in how they are oriented in 3D space (e.g., <em>cis</em> vs <em>trans</em> arrangements).</li>
+        </ul>
+      </div>
+
+      <div class="concept-section">
+        <h3>Detailed Examples</h3>
+        
+        <div class="example-card">
+          <span class="example-card-title">Example 1: Technetium-99m (Nuclear)</span>
+          <p>Technetium-99m (\(^{99m}_{43}\text{Tc}\)) is a meta-stable nuclear isomer of Technetium-99. It is the most widely used radioactive isotope in medical diagnostics worldwide.</p>
+          <ul class="concept-list">
+            <li>It has a half-life of 6 hours, which is perfect for medical scans (gives enough time for imaging, but decays rapidly enough to minimize radiation exposure).</li>
+            <li>It decays to the ground state \(^{99}_{43}\text{Tc}\) by emitting a single low-energy gamma photon (\(140 \text{ keV}\)), which is easily detected by gamma cameras.</li>
+          </ul>
+          <p class="formula">^{99m}_{43}\text{Tc} \xrightarrow{\text{Isomeric Transition}} ^{99}_{43}\text{Tc} + \gamma</p>
+        </div>
+
+        <div class="example-card">
+          <span class="example-card-title">Example 2: Butane vs. Isobutane (Chemical)</span>
+          <p>Both butane and isobutane share the chemical formula <span class="formula">\text{C}_4\text{H}_{10}</span>, but their atoms are bonded differently:</p>
+          <ul class="concept-list">
+            <li><strong>n-Butane</strong>: A straight chain of 4 carbon atoms. Boiling point: \(-0.5^\circ\text{C}\).</li>
+            <li><strong>Isobutane (2-methylpropane)</strong>: A branched chain with a central carbon bonded to three methyl groups. Boiling point: \(-11.7^\circ\text{C}\).</li>
+          </ul>
+          <p>Because of this difference in structure, isobutane is more volatile and is often used as a refrigerant or propellant.</p>
+        </div>
+      </div>
+
+      <div class="science-widget" id="isomerWidget">
+        <div class="widget-header">
+          <h4 class="widget-title">Isomer Toggle Simulator</h4>
+          <span class="widget-badge" id="isomerTypeBadge">Nuclear Isomer</span>
+        </div>
+        <div class="widget-body">
+          <div style="display: flex; gap: 10px;">
+            <button class="widget-btn" id="btnNuclearTab">Nuclear Isomerism</button>
+            <button class="widget-btn-secondary" id="btnChemicalTab">Chemical Isomerism</button>
+          </div>
+
+          <!-- Nuclear Panel -->
+          <div id="nuclearPanel" style="display: flex; flex-direction: column; gap: 16px;">
+            <p style="font-size: 13.5px; color: var(--ink-soft); margin: 0;">
+              Click 'Trigger Gamma Decay' to see the excited meta-stable Technetium-99m nucleus transition to its ground state by emitting a gamma photon (\(\gamma\)).
+            </p>
+            <div class="decay-stage">
+              <div class="decay-flash" id="decayFlash"></div>
+              <div class="decay-particle" id="nucleus"></div>
+              <div class="decay-gamma" id="gammaPhoton">γ</div>
+            </div>
+            <div style="text-align: center;">
+              <button class="widget-btn" id="btnDecay">Trigger Gamma Decay</button>
+            </div>
+            <div class="widget-output-panel">
+              <div class="widget-row">
+                <span class="widget-row-label">Nuclear State</span>
+                <span class="widget-row-val" id="nucState" style="color:var(--gold);">Excited Meta-stable (99m-Tc)</span>
+              </div>
+              <div class="widget-row" style="border-bottom:none">
+                <span class="widget-row-label">Energy Level</span>
+                <span class="widget-row-val" id="nucEnergy" style="color:var(--red);">High (140.5 keV)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chemical Panel (hidden by default) -->
+          <div id="chemicalPanel" style="display: none; flex-direction: column; gap: 16px;">
+            <div class="widget-field">
+              <label for="chemSelect">Select Isomer Set</label>
+              <select id="chemSelect" class="widget-select">
+                <option value="butane">Butane vs Isobutane (Formula: C₄H₁₀)</option>
+                <option value="ether">Ethanol vs Dimethyl Ether (Formula: C₂H₆O)</option>
+              </select>
+            </div>
+            
+            <div class="mendeleev-grid">
+              <div class="mendeleev-col" style="text-align: center;">
+                <div class="mendeleev-col-title" id="lblChem1">n-Butane</div>
+                <div style="height: 100px; display:flex; align-items:center; justify-content:center;" id="svgChem1"></div>
+              </div>
+              <div class="mendeleev-col" style="text-align: center;">
+                <div class="mendeleev-col-title" id="lblChem2">Isobutane</div>
+                <div style="height: 100px; display:flex; align-items:center; justify-content:center;" id="svgChem2"></div>
+              </div>
+            </div>
+            
+            <div class="widget-output-panel">
+              <span class="widget-row-label" style="font-weight: 700;">Structural Comparison</span>
+              <p id="chemDesc" style="font-size: 13.5px; color: var(--ink-soft); margin-top: 8px; margin-bottom: 0;">
+                n-Butane has a straight 4-carbon chain. Isobutane has a branched 3-carbon chain with a methyl group in the middle.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btnNuc = document.getElementById("btnNuclearTab");
+    const btnChem = document.getElementById("btnChemicalTab");
+    const nucPanel = document.getElementById("nuclearPanel");
+    const chemPanel = document.getElementById("chemicalPanel");
+    const badge = document.getElementById("isomerTypeBadge");
+
+    // Tab Switching
+    btnNuc.addEventListener("click", () => {
+      btnNuc.className = "widget-btn";
+      btnChem.className = "widget-btn-secondary";
+      nucPanel.style.display = "flex";
+      chemPanel.style.display = "none";
+      badge.textContent = "Nuclear Isomer";
+    });
+    btnChem.addEventListener("click", () => {
+      btnChem.className = "widget-btn";
+      btnNuc.className = "widget-btn-secondary";
+      chemPanel.style.display = "flex";
+      nucPanel.style.display = "none";
+      badge.textContent = "Chemical Isomer";
+      renderChemical();
+    });
+
+    // Nuclear Decay Simulator
+    const btnDecay = document.getElementById("btnDecay");
+    const nucleus = document.getElementById("nucleus");
+    const gamma = document.getElementById("gammaPhoton");
+    const flash = document.getElementById("decayFlash");
+    
+    let isExcited = true;
+
+    btnDecay.addEventListener("click", () => {
+      if (!isExcited) {
+        // Reset state
+        isExcited = true;
+        nucleus.style.background = "radial-gradient(circle, #ffeb3b, #f57f17)";
+        nucleus.style.boxShadow = "0 0 12px #ffeb3b";
+        document.getElementById("nucState").textContent = "Excited Meta-stable (99m-Tc)";
+        document.getElementById("nucState").style.color = "var(--gold)";
+        document.getElementById("nucEnergy").textContent = "High (140.5 keV)";
+        document.getElementById("nucEnergy").style.color = "var(--red)";
+        btnDecay.textContent = "Trigger Gamma Decay";
+        gamma.style.animation = "";
+        return;
+      }
+
+      // Animate decay
+      gamma.style.animation = "gammaPulse 1.2s forwards";
+      
+      setTimeout(() => {
+        flash.style.opacity = "0.7";
+        setTimeout(() => { flash.style.opacity = "0"; }, 150);
+        
+        nucleus.style.background = "radial-gradient(circle, #b0bec5, #37474f)";
+        nucleus.style.boxShadow = "none";
+        document.getElementById("nucState").textContent = "Ground State (99-Tc)";
+        document.getElementById("nucState").style.color = "var(--teal)";
+        document.getElementById("nucEnergy").textContent = "Low (0.0 keV)";
+        document.getElementById("nucEnergy").style.color = "var(--ink-soft)";
+        btnDecay.textContent = "Reset Nucleus";
+        isExcited = false;
+      }, 300);
+    });
+
+    // Chemical Structures
+    const chemSelect = document.getElementById("chemSelect");
+    
+    const svgData = {
+      butane: {
+        lbl1: "n-Butane",
+        lbl2: "Isobutane",
+        desc: "Butane is a straight-chain alkane. Isobutane is a branched-chain isomer. Because isobutane has a more spherical shape, it has less surface area, leading to weaker London dispersion forces and a lower boiling point.",
+        svg1: `<svg viewBox="0 0 120 60" width="100%" height="100%">
+          <!-- C1 - C2 - C3 - C4 -->
+          <line x1="15" y1="30" x2="45" y2="15" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="45" y1="15" x2="75" y2="45" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="75" y1="45" x2="105" y2="30" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="15" cy="30" r="4" fill="var(--teal)"/>
+          <circle cx="45" cy="15" r="4" fill="var(--teal)"/>
+          <circle cx="75" cy="45" r="4" fill="var(--teal)"/>
+          <circle cx="105" cy="30" r="4" fill="var(--teal)"/>
+          <text x="15" y="44" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH₃</text>
+          <text x="45" y="29" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH₂</text>
+          <text x="75" y="59" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH₂</text>
+          <text x="105" y="44" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH₃</text>
+        </svg>`,
+        svg2: `<svg viewBox="0 0 120 70" width="100%" height="100%">
+          <!-- Central C with 3 branches -->
+          <line x1="60" y1="35" x2="25" y2="35" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="60" y1="35" x2="95" y2="35" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="60" y1="35" x2="60" y2="10" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="60" cy="35" r="4" fill="var(--teal)"/>
+          <circle cx="25" cy="35" r="4" fill="var(--teal)"/>
+          <circle cx="95" cy="35" r="4" fill="var(--teal)"/>
+          <circle cx="60" cy="10" r="4" fill="var(--teal)"/>
+          <text x="60" y="48" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH</text>
+          <text x="15" y="38" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH₃</text>
+          <text x="105" y="38" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH₃</text>
+          <text x="60" y="22" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH₃</text>
+        </svg>`
+      },
+      ether: {
+        lbl1: "Ethanol",
+        lbl2: "Dimethyl Ether",
+        desc: "These are functional isomers. Ethanol contains a polar hydroxyl group (-OH), enabling it to form hydrogen bonds. Consequently, ethanol is a liquid at room temperature (boils at 78°C). Dimethyl ether cannot form hydrogen bonds and is a gas (boils at -24°C).",
+        svg1: `<svg viewBox="0 0 120 60" width="100%" height="100%">
+          <!-- C - C - O -->
+          <line x1="20" y1="35" x2="55" y2="20" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="55" y1="20" x2="90" y2="35" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="20" cy="35" r="4" fill="var(--teal)"/>
+          <circle cx="55" cy="20" r="4" fill="var(--teal)"/>
+          <circle cx="90" cy="35" r="4" fill="var(--red)"/>
+          <text x="20" y="49" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH₃</text>
+          <text x="55" y="34" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH₂</text>
+          <text x="95" y="49" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">OH</text>
+        </svg>`,
+        svg2: `<svg viewBox="0 0 120 60" width="100%" height="100%">
+          <!-- C - O - C -->
+          <line x1="20" y1="35" x2="60" y2="20" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="60" y1="20" x2="100" y2="35" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="20" cy="35" r="4" fill="var(--teal)"/>
+          <circle cx="60" cy="20" r="4" fill="var(--red)"/>
+          <circle cx="100" cy="35" r="4" fill="var(--teal)"/>
+          <text x="20" y="49" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH₃</text>
+          <text x="60" y="34" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">O</text>
+          <text x="100" y="49" font-family="monospace" font-size="10" text-anchor="middle" font-weight="bold">CH₃</text>
+        </svg>`
+      }
+    };
+
+    function renderChemical() {
+      const type = chemSelect.value;
+      const data = svgData[type];
+
+      document.getElementById("lblChem1").textContent = data.lbl1;
+      document.getElementById("lblChem2").textContent = data.lbl2;
+      document.getElementById("svgChem1").innerHTML = data.svg1;
+      document.getElementById("svgChem2").innerHTML = data.svg2;
+      document.getElementById("chemDesc").textContent = data.desc;
+    }
+
+    chemSelect.addEventListener("change", renderChemical);
+  });
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

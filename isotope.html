@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isotope — Reagent</title>
+<meta name="description" content="Atoms of the same element with different numbers of neutrons.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Atomic Structure</span>
+    <h1>Isotope</h1>
+    <p class="lede">Atoms of the same element with different numbers of neutrons.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <span class="info-kicker">Atomic Structure</span>
+      <h2>Isotope</h2>
+      <p class="lede">What isotopes are and how they differ from each other.</p>
+
+      <div class="concept-section">
+        <h3>What is an Isotope?</h3>
+        <p><strong>Isotopes</strong> are atoms of the same element that have the <strong>same number of protons</strong> (same atomic number <i>Z</i>) but a <strong>different number of neutrons</strong> (different mass number <i>A</i>). The term comes from the Greek words <em>isos</em> ("same") and <em>topos</em> ("place"), indicating that they occupy the same position in the periodic table.</p>
+        
+        <h4>Chemical vs. Physical Properties</h4>
+        <p>Because chemical reactivity is determined by an atom's electron shell configuration (which is governed by the number of protons), isotopes of an element exhibit <strong>nearly identical chemical properties</strong>. For example, deuterium (heavy hydrogen) reacts with oxygen to form water (D<sub>2</sub>O, "heavy water") in the exact same stoichiometry as normal hydrogen.</p>
+        <p>However, because they differ in mass, isotopes exhibit <strong>different physical properties</strong> (such as density, melting point, boiling point, and diffusion rates) and wildly different <strong>nuclear properties</strong> (such as stability and radioactivity).</p>
+      </div>
+
+      <div class="concept-section">
+        <h3>Average Atomic Mass Calculation</h3>
+        <p>The atomic weight listed for elements on the periodic table is not the mass of a single atom. Instead, it is the <strong>weighted average</strong> of the masses of all naturally occurring isotopes of that element, based on their fractional abundance on Earth.</p>
+        <p>The formula for calculating relative atomic mass (<i>A<sub>r</sub></i>) is:</p>
+        <p class="formula"><i>A<sub>r</sub></i> = Σ (Isotope Mass × Fractional Abundance)</p>
+      </div>
+
+      <div class="concept-section">
+        <h3>Detailed Examples</h3>
+        
+        <div class="example-card">
+          <span class="example-card-title">Example 1: The Isotopes of Hydrogen</span>
+          <p>Hydrogen has three naturally occurring isotopes, which are unique in having their own specific names:</p>
+          <ul class="concept-list">
+            <li><strong>Protium (<sup>1</sup><sub>1</sub>H)</strong>: 1 proton, 0 neutrons. It constitutes 99.98% of natural hydrogen.</li>
+            <li><strong>Deuterium (<sup>2</sup><sub>1</sub>H or D)</strong>: 1 proton, 1 neutron. Stable, constitutes 0.02% of natural hydrogen. Used in nuclear reactors.</li>
+            <li><strong>Tritium (<sup>3</sup><sub>1</sub>H or T)</strong>: 1 proton, 2 neutrons. Radioactive (half-life of 12.3 years), trace amounts in nature. Used in fusion research.</li>
+          </ul>
+        </div>
+
+        <div class="example-card">
+          <span class="example-card-title">Example 2: Chlorine Atomic Weight Math</span>
+          <p>Chlorine exists primarily as two stable isotopes: Chlorine-35 (mass ≈ 35 amu) with 75.77% abundance, and Chlorine-37 (mass ≈ 37 amu) with 24.23% abundance.</p>
+          <p><strong>Weighted Average Calculation:</strong></p>
+          <p class="formula"><i>A<sub>r</sub></i>(Cl) = (35 × 0.7577) + (37 × 0.2423) = 26.52 + 8.96 = 35.48 amu</p>
+          <p>This is why Chlorine is represented in the periodic table with an atomic mass of approximately 35.5.</p>
+        </div>
+      </div>
+
+      <div class="science-widget" id="isotopeWidget">
+        <div class="widget-header">
+          <h4 class="widget-title">Isotope Abundance &amp; Mass Calculator</h4>
+          <span class="widget-badge" id="elementBadge">Chlorine</span>
+        </div>
+        <div class="widget-body">
+          <p style="font-size: 13.5px; color: var(--ink-soft); margin: 0 0 10px;">
+            Drag the slider to adjust the abundance of the lighter isotope and see how it shifts the weighted average atomic weight of the element.
+          </p>
+
+          <div class="widget-controls">
+            <div class="widget-field" style="flex: 1 1 100%;">
+              <label for="abundanceSlider">Abundance of Chlorine-35 (<sup>35</sup>Cl)</label>
+              <div class="widget-slider-row">
+                <input type="range" id="abundanceSlider" min="0" max="100" value="76" class="widget-slider">
+                <span id="abundanceVal" class="widget-slider-val" style="min-width: 45px;">76%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget-output-panel">
+            <div class="widget-row">
+              <span class="widget-row-label">Chlorine-35 Abundance</span>
+              <span class="widget-row-val" id="cl35Pct" style="color: var(--teal);">76.0%</span>
+            </div>
+            <div class="widget-row">
+              <span class="widget-row-label">Chlorine-37 Abundance</span>
+              <span class="widget-row-val" id="cl37Pct" style="color: var(--gold);">24.0%</span>
+            </div>
+            <div class="widget-row" style="background: rgba(44, 110, 95, 0.05); padding: 12px 8px; border-radius: 4px;">
+              <span class="widget-row-label" style="font-weight: 700;">Calculated Atomic Weight</span>
+              <span class="widget-row-val" id="avgMassResult" style="color: var(--teal); font-size: 16px;">35.48 amu</span>
+            </div>
+            <div class="widget-row" style="border-bottom:none; font-size:12px; color: var(--ink-soft); font-family: var(--mono); word-break: break-all;">
+              <span id="mathExplanation">Calculation: (35 × 0.76) + (37 × 0.24) = 35.48 amu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.getElementById("abundanceSlider");
+    const label = document.getElementById("abundanceVal");
+    
+    function updateAbundance() {
+      const p35 = parseFloat(slider.value);
+      const p37 = 100 - p35;
+
+      label.textContent = p35 + "%";
+      document.getElementById("cl35Pct").textContent = p35.toFixed(1) + "%";
+      document.getElementById("cl37Pct").textContent = p37.toFixed(1) + "%";
+
+      const averageMass = (35 * (p35 / 100)) + (37 * (p37 / 100));
+      document.getElementById("avgMassResult").textContent = averageMass.toFixed(2) + " amu";
+
+      document.getElementById("mathExplanation").textContent = 
+        `Calculation: (35 × ${p35 / 100}) + (37 × ${(p37 / 100).toFixed(2)}) = ${averageMass.toFixed(2)} amu`;
+    }
+
+    slider.addEventListener("input", updateAbundance);
+    
+    // Init
+    updateAbundance();
+  });
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electronic Configuration — Reagent</title>
+<meta name="description" content="How electrons are arranged across an atom's shells and subshells.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Atomic Structure</span>
+    <h1>Electronic Configuration</h1>
+    <p class="lede">How electrons are arranged across an atom's shells and subshells.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <span class="info-kicker">Atomic Structure</span>
+      <h2>Electronic Configuration</h2>
+      <p class="lede">How electrons are arranged across an atom's shells and subshells.</p>
+
+
+      <div class="concept-section">
+        <h3>Introduction to Electron Configuration</h3>
+        <p>The <strong>electronic configuration</strong> of an atom describes the distribution of its electrons across various energy levels (shells), subshells, and orbitals. Understanding this arrangement is key to predicting an element's chemical properties, reactivity, valency, and position in the periodic table.</p>
+        <p>Electrons reside in main energy levels called <strong>shells</strong> (designated by principal quantum number <i>n</i> = 1, 2, 3, 4... or letters K, L, M, N...). Each shell is divided into <strong>subshells</strong> (<i>s, p, d, f</i>), which in turn consist of one or more <strong>orbitals</strong>. An orbital is a region of space where there is a high probability of finding an electron, and each orbital can hold a maximum of <strong>two electrons</strong>.</p>
+        
+        <div class="theory-block">
+          <strong>Shell and Subshell Capacities:</strong>
+          <ul class="concept-list" style="margin-top:8px; margin-bottom:0;">
+            <li>Maximum electrons in a shell <i>n</i> = 2<i>n</i><sup>2</sup> (e.g., K-shell holds 2, L-shell holds 8, M-shell holds 18).</li>
+            <li>Subshell capacities: <i>s</i> holds 2, <i>p</i> holds 6, <i>d</i> holds 10, and <i>f</i> holds 14 electrons.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="concept-section">
+        <h3>The Three Fundamental Rules</h3>
+        <p>The filling of orbitals is governed by three primary principles:</p>
+        
+        <h4>1. Aufbau Principle</h4>
+        <p><em>Aufbau</em> is a German word meaning "building up". The principle states that electrons sequentially fill orbitals in order of increasing energy, starting from the lowest energy level. The order of filling is determined by the (<i>n</i> + <i>l</i>) rule, visualized by the diagonal rule pattern:</p>
+        <p class="formula">1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p → 7s → 5f → 6d → 7p</p>
+        <p>Notice that the 4<i>s</i> orbital has lower energy than the 3<i>d</i> orbital, so 4<i>s</i> fills before 3<i>d</i>.</p>
+
+        <h4>2. Pauli Exclusion Principle</h4>
+        <p>Formulated by Wolfgang Pauli, this principle states that no two electrons in an atom can have the exact same set of four quantum numbers. Practically, this means that an orbital can hold at most two electrons, and they must have <strong>opposite spins</strong> (spin-up ↑ and spin-down ↓).</p>
+
+        <h4>3. Hund's Rule of Maximum Multiplicity</h4>
+        <p>When filling degenerate orbitals (orbitals belonging to the same subshell, like the three <i>p</i> or five <i>d</i> orbitals), electrons enter separate orbitals singly with parallel spins first, before pairing up. This minimizes electron-electron repulsion within the subshell.</p>
+      </div>
+
+      <div class="concept-section">
+        <h3>Detailed Examples</h3>
+        
+        <div class="example-card">
+          <span class="example-card-title">Example 1: Carbon (Z = 6)</span>
+          <p>Carbon has 6 electrons. Following the rules:</p>
+          <ul class="concept-list">
+            <li>First, fill 1<i>s</i> orbital with 2 electrons: <span class="formula">1s²</span></li>
+            <li>Next, fill 2<i>s</i> orbital with 2 electrons: <span class="formula">2s²</span></li>
+            <li>The remaining 2 electrons enter the 2<i>p</i> subshell. By Hund's rule, they occupy separate 2<i>p</i> orbitals with parallel spins: <span class="formula">2p<sub>x</sub>¹ 2p<sub>y</sub>¹</span></li>
+          </ul>
+          <p><strong>Full configuration:</strong> <span class="formula">1s² 2s² 2p²</span></p>
+        </div>
+
+        <div class="example-card">
+          <span class="example-card-title">Example 2: Iron (Z = 26)</span>
+          <p>Iron has 26 electrons. Following the Aufbau sequence:</p>
+          <p>Fill: 1<i>s</i><sup>2</sup>, 2<i>s</i><sup>2</sup>, 2<i>p</i><sup>6</sup> (10 e⁻), 3<i>s</i><sup>2</sup>, 3<i>p</i><sup>6</sup> (18 e⁻). This matches the Argon core [Ar].</p>
+          <p>Next, the electrons fill 4<i>s</i> before 3<i>d</i>. We put 2 electrons in 4<i>s</i> (20 e⁻) and the remaining 6 electrons in the 3<i>d</i> orbitals.</p>
+          <p><strong>Full configuration:</strong> <span class="formula">1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s²</span> or <span class="formula">[Ar] 3d⁶ 4s²</span></p>
+        </div>
+
+        <div class="example-card">
+          <span class="example-card-title">Anomalous Configurations: Chromium (Z=24) &amp; Copper (Z=29)</span>
+          <p>Certain elements deviate from the Aufbau principle because half-filled (<i>d</i><sup>5</sup>) and fully-filled (<i>d</i><sup>10</sup>) subshells possess exceptional thermodynamic stability due to symmetrical distribution of charge and high exchange energy.</p>
+          <ul class="concept-list">
+            <li><strong>Chromium (Z=24)</strong>: Expected: [Ar] 3d⁴ 4s². Actual: <span class="formula">[Ar] 3d⁵ 4s¹</span>. An electron shifts from 4<i>s</i> to 3<i>d</i> to create a stable half-filled <i>d</i> subshell.</li>
+            <li><strong>Copper (Z=29)</strong>: Expected: [Ar] 3d⁹ 4s². Actual: <span class="formula">[Ar] 3d¹⁰ 4s¹</span>. An electron shifts from 4<i>s</i> to 3<i>d</i> to form a highly stable fully-filled <i>d</i> subshell.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="science-widget" id="configWidget">
+        <div class="widget-header">
+          <h4 class="widget-title">Interactive Electron Configuration Generator</h4>
+          <span class="widget-badge" id="elemSymbol">H</span>
+        </div>
+        <div class="widget-body">
+          <div class="widget-controls">
+            <div class="widget-field">
+              <label for="elemSelect">Select Element</label>
+              <select id="elemSelect" class="widget-select"></select>
+            </div>
+          </div>
+          <div class="widget-output-panel">
+            <div class="widget-row">
+              <span class="widget-row-label">Element Name</span>
+              <span class="widget-row-val" id="elemName">Hydrogen</span>
+            </div>
+            <div class="widget-row">
+              <span class="widget-row-label">Atomic Number (Z)</span>
+              <span class="widget-row-val" id="elemZ">1</span>
+            </div>
+            <div class="widget-row">
+              <span class="widget-row-label">Noble Gas Shorthand</span>
+              <span class="widget-row-val" id="elemShorthand" style="color:var(--teal)">1s¹</span>
+            </div>
+            <div class="widget-row" style="border-bottom:none">
+              <span class="widget-row-label">Full Configuration</span>
+              <span class="widget-row-val" id="elemFull" style="word-break:break-all">1s¹</span>
+            </div>
+          </div>
+
+          <h4 style="margin-top: 10px; margin-bottom: 5px;">Orbital Diagrams (Valence Shells)</h4>
+          <div class="orbital-visualizer" id="orbitalVisualizer">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elementsData = [
+      { z: 1, sym: "H", name: "Hydrogen", config: "1s¹", shorthand: "1s¹", breakdown: { "1s": 1 } },
+      { z: 2, sym: "He", name: "Helium", config: "1s²", shorthand: "1s²", breakdown: { "1s": 2 } },
+      { z: 3, sym: "Li", name: "Lithium", config: "1s² 2s¹", shorthand: "[He] 2s¹", breakdown: { "1s": 2, "2s": 1 } },
+      { z: 4, sym: "Be", name: "Beryllium", config: "1s² 2s²", shorthand: "[He] 2s²", breakdown: { "1s": 2, "2s": 2 } },
+      { z: 5, sym: "B", name: "Boron", config: "1s² 2s² 2p¹", shorthand: "[He] 2s² 2p¹", breakdown: { "1s": 2, "2s": 2, "2p": [1, 0, 0] } },
+      { z: 6, sym: "C", name: "Carbon", config: "1s² 2s² 2p²", shorthand: "[He] 2s² 2p²", breakdown: { "1s": 2, "2s": 2, "2p": [1, 1, 0] } },
+      { z: 7, sym: "N", name: "Nitrogen", config: "1s² 2s² 2p³", shorthand: "[He] 2s² 2p³", breakdown: { "1s": 2, "2s": 2, "2p": [1, 1, 1] } },
+      { z: 8, sym: "O", name: "Oxygen", config: "1s² 2s² 2p⁴", shorthand: "[He] 2s² 2p⁴", breakdown: { "1s": 2, "2s": 2, "2p": [2, 1, 1] } },
+      { z: 9, sym: "F", name: "Fluorine", config: "1s² 2s² 2p⁵", shorthand: "[He] 2s² 2p⁵", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 1] } },
+      { z: 10, sym: "Ne", name: "Neon", config: "1s² 2s² 2p⁶", shorthand: "[He] 2s² 2p⁶", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2] } },
+      { z: 11, sym: "Na", name: "Sodium", config: "1s² 2s² 2p⁶ 3s¹", shorthand: "[Ne] 3s¹", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 1 } },
+      { z: 12, sym: "Mg", name: "Magnesium", config: "1s² 2s² 2p⁶ 3s²", shorthand: "[Ne] 3s²", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2 } },
+      { z: 13, sym: "Al", name: "Aluminum", config: "1s² 2s² 2p⁶ 3s² 3p¹", shorthand: "[Ne] 3s² 3p¹", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [1, 0, 0] } },
+      { z: 14, sym: "Si", name: "Silicon", config: "1s² 2s² 2p⁶ 3s² 3p²", shorthand: "[Ne] 3s² 3p²", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [1, 1, 0] } },
+      { z: 15, sym: "P", name: "Phosphorus", config: "1s² 2s² 2p⁶ 3s² 3p³", shorthand: "[Ne] 3s² 3p³", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [1, 1, 1] } },
+      { z: 16, sym: "S", name: "Sulfur", config: "1s² 2s² 2p⁶ 3s² 3p⁴", shorthand: "[Ne] 3s² 3p⁴", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 1, 1] } },
+      { z: 17, sym: "Cl", name: "Chlorine", config: "1s² 2s² 2p⁶ 3s² 3p⁵", shorthand: "[Ne] 3s² 3p⁵", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 1] } },
+      { z: 18, sym: "Ar", name: "Argon", config: "1s² 2s² 2p⁶ 3s² 3p⁶", shorthand: "[Ne] 3s² 3p⁶", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2] } },
+      { z: 19, sym: "K", name: "Potassium", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹", shorthand: "[Ar] 4s¹", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "4s": 1 } },
+      { z: 20, sym: "Ca", name: "Calcium", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 4s²", shorthand: "[Ar] 4s²", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "4s": 2 } },
+      { z: 21, sym: "Sc", name: "Scandium", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹ 4s²", shorthand: "[Ar] 3d¹ 4s²", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "3d": [1, 0, 0, 0, 0], "4s": 2 } },
+      { z: 22, sym: "Ti", name: "Titanium", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d² 4s²", shorthand: "[Ar] 3d² 4s²", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "3d": [1, 1, 0, 0, 0], "4s": 2 } },
+      { z: 23, sym: "V", name: "Vanadium", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d³ 4s²", shorthand: "[Ar] 3d³ 4s²", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "3d": [1, 1, 1, 0, 0], "4s": 2 } },
+      { z: 24, sym: "Cr", name: "Chromium", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁵ 4s¹", shorthand: "[Ar] 3d⁵ 4s¹", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "3d": [1, 1, 1, 1, 1], "4s": 1 } },
+      { z: 25, sym: "Mn", name: "Manganese", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁵ 4s²", shorthand: "[Ar] 3d⁵ 4s²", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "3d": [1, 1, 1, 1, 1], "4s": 2 } },
+      { z: 26, sym: "Fe", name: "Iron", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁶ 4s²", shorthand: "[Ar] 3d⁶ 4s²", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "3d": [2, 1, 1, 1, 1], "4s": 2 } },
+      { z: 27, sym: "Co", name: "Cobalt", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁷ 4s²", shorthand: "[Ar] 3d⁷ 4s²", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "3d": [2, 2, 1, 1, 1], "4s": 2 } },
+      { z: 28, sym: "Ni", name: "Nickel", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d⁸ 4s²", shorthand: "[Ar] 3d⁸ 4s²", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "3d": [2, 2, 2, 1, 1], "4s": 2 } },
+      { z: 29, sym: "Cu", name: "Copper", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s¹", shorthand: "[Ar] 3d¹⁰ 4s¹", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "3d": [2, 2, 2, 2, 2], "4s": 1 } },
+      { z: 30, sym: "Zn", name: "Zinc", config: "1s² 2s² 2p⁶ 3s² 3p⁶ 3d¹⁰ 4s²", shorthand: "[Ar] 3d¹⁰ 4s²", breakdown: { "1s": 2, "2s": 2, "2p": [2, 2, 2], "3s": 2, "3p": [2, 2, 2], "3d": [2, 2, 2, 2, 2], "4s": 2 } }
+    ];
+
+    const select = document.getElementById("elemSelect");
+    elementsData.forEach(el => {
+      const opt = document.createElement("option");
+      opt.value = el.z;
+      opt.textContent = `${el.z} - ${el.name} (${el.sym})`;
+      select.appendChild(opt);
+    });
+
+    function getSpinSymbols(num) {
+      if (num === 0) return "";
+      if (num === 1) return '<span class="orbital-spin spin-up">↑</span>';
+      if (num === 2) return '<span class="orbital-spin spin-up">↑</span><span class="orbital-spin spin-down">↓</span>';
+      return "";
+    }
+
+    function renderOrbitals(el) {
+      const container = document.getElementById("orbitalVisualizer");
+      container.innerHTML = "";
+
+      // List of subshells to display (focus on the higher shells depending on Z)
+      const subshells = [];
+      
+      if (el.z <= 2) {
+        subshells.push({ name: "1s", count: 1, val: el.breakdown["1s"] });
+      } else if (el.z <= 10) {
+        subshells.push({ name: "2s", count: 1, val: el.breakdown["2s"] });
+        subshells.push({ name: "2p", count: 3, val: el.breakdown["2p"] });
+      } else if (el.z <= 18) {
+        subshells.push({ name: "3s", count: 1, val: el.breakdown["3s"] });
+        subshells.push({ name: "3p", count: 3, val: el.breakdown["3p"] });
+      } else {
+        subshells.push({ name: "3d", count: 5, val: el.breakdown["3d"] });
+        subshells.push({ name: "4s", count: 1, val: el.breakdown["4s"] });
+      }
+
+      subshells.forEach(sub => {
+        const card = document.createElement("div");
+        card.className = "orbital-subshell-card";
+        
+        const label = document.createElement("div");
+        label.className = "orbital-card-label";
+        label.textContent = sub.name;
+        card.appendChild(label);
+
+        const boxes = document.createElement("div");
+        boxes.className = "orbital-boxes";
+
+        for (let i = 0; i < sub.count; i++) {
+          const box = document.createElement("div");
+          box.className = "orbital-box active";
+          
+          let val = 0;
+          if (Array.isArray(sub.val)) {
+            val = sub.val[i] || 0;
+          } else {
+            val = sub.val || 0;
+          }
+          box.innerHTML = getSpinSymbols(val);
+          boxes.appendChild(box);
+        }
+
+        card.appendChild(boxes);
+        container.appendChild(card);
+      });
+    }
+
+    function updateWidget(z) {
+      const el = elementsData.find(e => e.z == z);
+      if (!el) return;
+
+      document.getElementById("elemSymbol").textContent = el.sym;
+      document.getElementById("elemName").textContent = el.name;
+      document.getElementById("elemZ").textContent = el.z;
+      document.getElementById("elemShorthand").textContent = el.shorthand;
+      document.getElementById("elemFull").textContent = el.config;
+
+      renderOrbitals(el);
+    }
+
+    select.addEventListener("change", (e) => {
+      updateWidget(e.target.value);
+    });
+
+    // Initialize with Hydrogen
+    updateWidget(1);
+  });
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

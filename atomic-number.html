@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atomic Number — Reagent</title>
+<meta name="description" content="What the atomic number is and why it defines an element.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Atomic Structure</span>
+    <h1>Atomic Number</h1>
+    <p class="lede">What the atomic number is and why it defines an element.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <span class="info-kicker">Atomic Structure</span>
+      <h2>Atomic Number</h2>
+      <p class="lede">What the atomic number is and why it defines an element.</p>
+
+      <div class="concept-section">
+        <h3>Definition of Atomic Number</h3>
+        <p>The <strong>atomic number</strong> (represented by the symbol <strong><i>Z</i></strong>) of a chemical element is the number of protons found in the nucleus of every atom of that element. Because protons carry a positive charge (+1e), the atomic number also represents the net positive electric charge of the nucleus.</p>
+        <p>In an ordinary, electrically neutral atom, the number of negatively charged electrons surrounding the nucleus is exactly equal to the atomic number. Thus, <i>Z</i> also determines the electron configuration, which directly dictates how the element reacts and binds with other substances.</p>
+        
+        <div class="theory-block">
+          <strong>Key Formula:</strong>
+          <p style="margin: 6px 0 0; font-family: var(--mono); font-size: 15px; text-align: center; color: var(--teal)">
+            Mass Number (A) = Atomic Number (Z) + Neutron Number (N)
+          </p>
+        </div>
+      </div>
+
+      <div class="concept-section">
+        <h3>Why Z Defines the Element</h3>
+        <p>An element's identity is defined exclusively by its atomic number. If you change the number of neutrons in a nucleus, you get an isotope of the <em>same</em> element. If you change the number of electrons, you get an ion of the <em>same</em> element. But if you change the number of protons, you create an entirely <strong>different element</strong>.</p>
+        <p>For example, any atom with exactly 6 protons is carbon, regardless of how many neutrons or electrons it has. If it gains a 7th proton, it instantly becomes nitrogen.</p>
+      </div>
+
+      <div class="concept-section">
+        <h3>Moseley's Law and History</h3>
+        <p>Prior to 1913, elements were ordered in the periodic table by their atomic weight. This led to several anomalies, such as placing Iodine after Tellurium despite Tellurium having a higher atomic weight, to keep elements with similar properties grouped together.</p>
+        <p>In 1913, British physicist <strong>Henry Moseley</strong> studied the frequencies of characteristic X-rays emitted by different elements when bombarded with high-energy electrons. He discovered a mathematical relationship (Moseley's Law):</p>
+        <p class="formula">√ν = a(Z - b)</p>
+        <p>Where ν is the frequency of the X-ray line, and <i>a</i> and <i>b</i> are constants. Moseley proved that the atomic number corresponds directly to the physical positive charge of the atomic nucleus, providing a solid scientific justification for organizing elements by atomic number rather than mass.</p>
+      </div>
+
+      <div class="concept-section">
+        <h3>Detailed Examples</h3>
+        
+        <div class="example-card">
+          <span class="example-card-title">Example 1: Carbon-12 vs Carbon-14</span>
+          <p>Carbon has an atomic number <i>Z</i> = 6, meaning every carbon atom has <strong>6 protons</strong> and 6 electrons (if neutral).</p>
+          <ul class="concept-list">
+            <li><strong>Carbon-12</strong> has a mass number <i>A</i> = 12. The number of neutrons is <i>N</i> = <i>A</i> - <i>Z</i> = 12 - 6 = 6 neutrons.</li>
+            <li><strong>Carbon-14</strong> is radioactive and has a mass number <i>A</i> = 14. The number of neutrons is <i>N</i> = 14 - 6 = 8 neutrons.</li>
+          </ul>
+          <p>Both behave identically in chemical reactions, but Carbon-14 is physically heavier and unstable.</p>
+        </div>
+
+        <div class="example-card">
+          <span class="example-card-title">Example 2: Sodium Cation (Na⁺)</span>
+          <p>Sodium has atomic number <i>Z</i> = 11. A neutral sodium atom has 11 protons and 11 electrons. When sodium reacts, it loses one valence electron to form a stable octet, resulting in a sodium ion (Na<sup>+</sup>):</p>
+          <ul class="concept-list">
+            <li>Protons: <i>Z</i> = 11 (positive charges)</li>
+            <li>Electrons: 11 - 1 = 10 (negative charges)</li>
+            <li>Net Charge: 11 - 10 = +1</li>
+          </ul>
+          <p>Its atomic number remains 11; it is still sodium, but carries a positive charge.</p>
+        </div>
+      </div>
+
+      <div class="science-widget" id="atomWidget">
+        <div class="widget-header">
+          <h4 class="widget-title">Build-an-Atom Simulator</h4>
+          <span class="widget-badge" id="isotopeSym">¹H</span>
+        </div>
+        <div class="widget-body">
+          <div class="widget-controls">
+            <div class="widget-field">
+              <label for="slideProtons">Protons (Z)</label>
+              <div class="widget-slider-row">
+                <input type="range" id="slideProtons" min="1" max="10" value="1" class="widget-slider">
+                <span id="valProtons" class="widget-slider-val">1</span>
+              </div>
+            </div>
+            <div class="widget-field">
+              <label for="slideNeutrons">Neutrons (N)</label>
+              <div class="widget-slider-row">
+                <input type="range" id="slideNeutrons" min="0" max="12" value="0" class="widget-slider">
+                <span id="valNeutrons" class="widget-slider-val">0</span>
+              </div>
+            </div>
+            <div class="widget-field">
+              <label for="slideElectrons">Electrons</label>
+              <div class="widget-slider-row">
+                <input type="range" id="slideElectrons" min="0" max="10" value="1" class="widget-slider">
+                <span id="valElectrons" class="widget-slider-val">1</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="atom-visualizer-container">
+            <div class="atom-svg-wrap">
+              <svg id="atomSvg" viewBox="0 0 200 200" width="100%" height="100%">
+                <!-- Shell 2 -->
+                <circle cx="100" cy="100" r="70" fill="none" stroke="rgba(27,36,32,0.12)" stroke-width="1"/>
+                <!-- Shell 1 -->
+                <circle cx="100" cy="100" r="45" fill="none" stroke="rgba(27,36,32,0.12)" stroke-width="1"/>
+                
+                <!-- Nucleus Glow -->
+                <circle cx="100" cy="100" r="22" fill="rgba(44, 110, 95, 0.05)"/>
+                
+                <!-- Dynamic group for nucleons and electrons -->
+                <g id="nucleonsGroup"></g>
+                <g id="electronsGroup"></g>
+              </svg>
+            </div>
+
+            <div class="atom-stats-banner">
+              <span class="atom-stat-pill" id="statElement">Hydrogen</span>
+              <span class="atom-stat-pill" id="statCharge">Neutral Atom</span>
+              <span class="atom-stat-pill" id="statMass">Mass: 1</span>
+            </div>
+          </div>
+
+          <div class="widget-output-panel">
+            <div class="widget-row">
+              <span class="widget-row-label">Element Symbol</span>
+              <span class="widget-row-val" id="outSymbol">H</span>
+            </div>
+            <div class="widget-row">
+              <span class="widget-row-label">Atomic Number (Protons)</span>
+              <span class="widget-row-val" id="outZ">1</span>
+            </div>
+            <div class="widget-row">
+              <span class="widget-row-label">Neutrons</span>
+              <span class="widget-row-val" id="outN">0</span>
+            </div>
+            <div class="widget-row" style="border-bottom:none">
+              <span class="widget-row-label">Electrons</span>
+              <span class="widget-row-val" id="outE">1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const pSlider = document.getElementById("slideProtons");
+    const nSlider = document.getElementById("slideNeutrons");
+    const eSlider = document.getElementById("slideElectrons");
+
+    const pVal = document.getElementById("valProtons");
+    const nVal = document.getElementById("valNeutrons");
+    const eVal = document.getElementById("valElectrons");
+
+    const elements = [
+      { z: 1, sym: "H", name: "Hydrogen" },
+      { z: 2, sym: "He", name: "Helium" },
+      { z: 3, sym: "Li", name: "Lithium" },
+      { z: 4, sym: "Be", name: "Beryllium" },
+      { z: 5, sym: "B", name: "Boron" },
+      { z: 6, sym: "C", name: "Carbon" },
+      { z: 7, sym: "N", name: "Nitrogen" },
+      { z: 8, sym: "O", name: "Oxygen" },
+      { z: 9, sym: "F", name: "Fluorine" },
+      { z: 10, sym: "Ne", name: "Neon" }
+    ];
+
+    function updateAtom() {
+      const p = parseInt(pSlider.value);
+      const n = parseInt(nSlider.value);
+      const e = parseInt(slideElectrons.value);
+
+      pVal.textContent = p;
+      nVal.textContent = n;
+      eVal.textContent = e;
+
+      const el = elements[p - 1];
+      const mass = p + n;
+      const charge = p - e;
+
+      // Update Labels
+      document.getElementById("outSymbol").textContent = el.sym;
+      document.getElementById("outZ").textContent = p;
+      document.getElementById("outN").textContent = n;
+      document.getElementById("outE").textContent = e;
+      document.getElementById("statMass").textContent = "Mass: " + mass;
+      document.getElementById("statElement").textContent = el.name;
+
+      const chargePill = document.getElementById("statCharge");
+      if (charge === 0) {
+        chargePill.textContent = "Neutral Atom";
+        chargePill.className = "atom-stat-pill neutral";
+      } else if (charge > 0) {
+        chargePill.textContent = "Positive Ion (+" + charge + ")";
+        chargePill.className = "atom-stat-pill positive";
+      } else {
+        chargePill.textContent = "Negative Ion (" + charge + ")";
+        chargePill.className = "atom-stat-pill negative";
+      }
+
+      const chargeSup = charge === 0 ? "" : (charge > 0 ? "+" + (charge === 1 ? "" : charge) : charge);
+      document.getElementById("isotopeSym").innerHTML = `<sup>${mass}</sup><sub>${p}</sub>${el.sym}<sup>${chargeSup}</sup>`;
+
+      // Render Nucleus
+      const nucleonsGrp = document.getElementById("nucleonsGroup");
+      nucleonsGrp.innerHTML = "";
+
+      // Distribute nucleons randomly but clumped in center
+      const particles = [];
+      for (let i = 0; i < p; i++) particles.push({ type: "proton", color: "var(--red)" });
+      for (let i = 0; i < n; i++) particles.push({ type: "neutron", color: "var(--grey)" });
+
+      // Deterministic seed placement
+      particles.forEach((part, index) => {
+        const angle = (index * 2.3999) * (180 / Math.PI); // golden ratio spiral
+        const dist = Math.min(15, Math.sqrt(index) * 4);
+        const x = 100 + dist * Math.cos(angle);
+        const y = 100 + dist * Math.sin(angle);
+
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", String(x));
+        circle.setAttribute("cy", String(y));
+        circle.setAttribute("r", "4.5");
+        circle.setAttribute("fill", part.color);
+        circle.setAttribute("stroke", "rgba(0,0,0,0.15)");
+        circle.setAttribute("stroke-width", "0.5");
+        
+        const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+        title.textContent = part.type;
+        circle.appendChild(title);
+        
+        nucleonsGrp.appendChild(circle);
+      });
+
+      // Render Electrons
+      const electronsGrp = document.getElementById("electronsGroup");
+      electronsGrp.innerHTML = "";
+
+      const shell1Count = Math.min(e, 2);
+      const shell2Count = Math.max(0, e - 2);
+
+      // Shell 1 (radius 45)
+      for (let i = 0; i < shell1Count; i++) {
+        const angle = (i * (360 / shell1Count)) * (Math.PI / 180);
+        const x = 100 + 45 * Math.cos(angle);
+        const y = 100 + 45 * Math.sin(angle);
+
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", String(x));
+        circle.setAttribute("cy", String(y));
+        circle.setAttribute("r", "3.5");
+        circle.setAttribute("fill", "var(--gold)");
+        circle.setAttribute("stroke", "rgba(0,0,0,0.1)");
+        circle.setAttribute("stroke-width", "0.5");
+        electronsGrp.appendChild(circle);
+      }
+
+      // Shell 2 (radius 70)
+      for (let i = 0; i < shell2Count; i++) {
+        const angle = (i * (360 / shell2Count)) * (Math.PI / 180);
+        const x = 100 + 70 * Math.cos(angle);
+        const y = 100 + 70 * Math.sin(angle);
+
+        const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+        circle.setAttribute("cx", String(x));
+        circle.setAttribute("cy", String(y));
+        circle.setAttribute("r", "3.5");
+        circle.setAttribute("fill", "var(--gold)");
+        circle.setAttribute("stroke", "rgba(0,0,0,0.1)");
+        circle.setAttribute("stroke-width", "0.5");
+        electronsGrp.appendChild(circle);
+      }
+    }
+
+    pSlider.addEventListener("input", updateAtom);
+    nSlider.addEventListener("input", updateAtom);
+    eSlider.addEventListener("input", updateAtom);
+
+    // Initial setup
+    updateAtom();
+  });
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

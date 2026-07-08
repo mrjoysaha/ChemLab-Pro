@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isobar — Reagent</title>
+<meta name="description" content="Atoms of different elements that share the same mass number.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Atomic Structure</span>
+    <h1>Isobar</h1>
+    <p class="lede">Atoms of different elements that share the same mass number.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <span class="info-kicker">Atomic Structure</span>
+      <h2>Isobar</h2>
+      <p class="lede">What isobars are and why they have matching mass numbers.</p>
+
+      <div class="concept-section">
+        <h3>What is an Isobar?</h3>
+        <p><strong>Isobars</strong> are atoms of different chemical elements that have the <strong>same mass number (<i>A</i>)</strong> but <strong>different atomic numbers (<i>Z</i>)</strong>. In other words, isobars contain the same total number of nucleons (protons + neutrons), but the distribution between protons and neutrons is different.</p>
+        <p>Because they have different numbers of protons, isobars always represent <strong>different elements</strong> and exhibit <strong>completely different chemical properties</strong>. Despite having different subatomic mixtures, their total nuclear mass is almost identical (differing only by negligible mass differences between protons/neutrons and binding energies).</p>
+      </div>
+
+      <div class="concept-section">
+        <h3>Detailed Examples</h3>
+        
+        <div class="example-card">
+          <span class="example-card-title">Example 1: The A = 40 Isobar Group</span>
+          <p>The elements Argon, Potassium, and Calcium form a well-known isobaric triplet with a mass number of <strong>40</strong>:</p>
+          <ul class="concept-list">
+            <li><strong>Argon-40 (<sup>40</sup><sub>18</sub>Ar)</strong>: 18 protons, 22 neutrons. Total nucleons = 40. (Noble gas)</li>
+            <li><strong>Potassium-40 (<sup>40</sup><sub>19</sub>K)</strong>: 19 protons, 21 neutrons. Total nucleons = 40. (Highly reactive alkali metal)</li>
+            <li><strong>Calcium-40 (<sup>40</sup><sub>20</sub>Ca)</strong>: 20 protons, 20 neutrons. Total nucleons = 40. (Alkaline earth metal)</li>
+          </ul>
+          <p>These elements are located adjacent to each other on the periodic table, yet are physically and chemically distinct. Calcium-40 makes up bones, Potassium-40 is radioactive and found in bananas, and Argon-40 is an inert gas.</p>
+        </div>
+
+        <div class="example-card">
+          <span class="example-card-title">Example 2: The A = 14 Isobar Pair</span>
+          <p>This pair represents a classic beta decay relationship:</p>
+          <ul class="concept-list">
+            <li><strong>Carbon-14 (<sup>14</sup><sub>6</sub>C)</strong>: 6 protons, 8 neutrons.</li>
+            <li><strong>Nitrogen-14 (<sup>14</sup><sub>7</sub>N)</strong>: 7 protons, 7 neutrons.</li>
+          </ul>
+          <p>When Carbon-14 undergoes beta decay, one of its neutrons turns into a proton, emitting an electron. The atomic number increases from 6 to 7 (Carbon becomes Nitrogen), but the mass number remains exactly 14.</p>
+        </div>
+      </div>
+
+      <div class="science-widget" id="isobarWidget">
+        <div class="widget-header">
+          <h4 class="widget-title">Isobar Balancing Scale</h4>
+          <span class="widget-badge" id="massBadge">Mass A = 40</span>
+        </div>
+        <div class="widget-body">
+          <p style="font-size: 13.5px; color: var(--ink-soft); margin: 0 0 10px;">
+            Select two elements from the same isobar family. Watch how their different internal proton/neutron counts balance out to the exact same mass.
+          </p>
+
+          <div class="widget-controls">
+            <div class="widget-field">
+              <label for="isobarFamily">Select Isobar Family</label>
+              <select id="isobarFamily" class="widget-select">
+                <option value="40" selected>Family A = 40 (Ar, K, Ca)</option>
+                <option value="14">Family A = 14 (C, N)</option>
+              </select>
+            </div>
+            <div class="widget-field">
+              <label for="elLeft">Compare Left Side</label>
+              <select id="elLeft" class="widget-select"></select>
+            </div>
+            <div class="widget-field">
+              <label for="elRight">Compare Right Side</label>
+              <select id="elRight" class="widget-select"></select>
+            </div>
+          </div>
+
+          <div class="scale-container">
+            <div class="scale-fulcrum"></div>
+            <div class="scale-beam" id="scaleBeam">
+              <!-- Left Pan -->
+              <div class="scale-pan scale-pan-left" style="left: -10px;">
+                <div class="scale-pan-line"></div>
+                <div class="scale-pan-plate"></div>
+                <div class="scale-weight-lbl" id="lblLeft">Ar</div>
+              </div>
+              <!-- Right Pan -->
+              <div class="scale-pan scale-pan-right" style="right: -10px;">
+                <div class="scale-pan-line"></div>
+                <div class="scale-pan-plate"></div>
+                <div class="scale-weight-lbl" id="lblRight">Ca</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mendeleev-grid">
+            <div class="mendeleev-col">
+              <div class="mendeleev-col-title"><span id="nameLeft">Argon-40</span> <span style="color:var(--teal)">Left</span></div>
+              <div class="mendeleev-prop-row">
+                <span class="mendeleev-prop-lbl">Protons (Z)</span>
+                <span class="mendeleev-prop-val" id="pLeft" style="color:var(--red);">18</span>
+              </div>
+              <div class="mendeleev-prop-row">
+                <span class="mendeleev-prop-lbl">Neutrons (N)</span>
+                <span class="mendeleev-prop-val" id="nLeft" style="color:var(--grey);">22</span>
+              </div>
+              <div class="mendeleev-prop-row">
+                <span class="mendeleev-prop-lbl">Total Mass (A)</span>
+                <span class="mendeleev-prop-val" id="totLeft" style="color:var(--teal); font-weight:700">40</span>
+              </div>
+            </div>
+            
+            <div class="mendeleev-col">
+              <div class="mendeleev-col-title"><span id="nameRight">Calcium-40</span> <span style="color:var(--gold)">Right</span></div>
+              <div class="mendeleev-prop-row">
+                <span class="mendeleev-prop-lbl">Protons (Z)</span>
+                <span class="mendeleev-prop-val" id="pRight" style="color:var(--red);">20</span>
+              </div>
+              <div class="mendeleev-prop-row">
+                <span class="mendeleev-prop-lbl">Neutrons (N)</span>
+                <span class="mendeleev-prop-val" id="nRight" style="color:var(--grey);">20</span>
+              </div>
+              <div class="mendeleev-prop-row">
+                <span class="mendeleev-prop-lbl">Total Mass (A)</span>
+                <span class="mendeleev-prop-val" id="totRight" style="color:var(--teal); font-weight:700">40</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const families = {
+      "40": [
+        { sym: "Ar", name: "Argon-40", p: 18, n: 22, mass: 40 },
+        { sym: "K", name: "Potassium-40", p: 19, n: 21, mass: 40 },
+        { sym: "Ca", name: "Calcium-40", p: 20, n: 20, mass: 40 }
+      ],
+      "14": [
+        { sym: "C", name: "Carbon-14", p: 6, n: 8, mass: 14 },
+        { sym: "N", name: "Nitrogen-14", p: 7, n: 7, mass: 14 }
+      ]
+    };
+
+    const selFamily = document.getElementById("isobarFamily");
+    const selL = document.getElementById("elLeft");
+    const selR = document.getElementById("elRight");
+    const beam = document.getElementById("scaleBeam");
+
+    function populateElements() {
+      const famKey = selFamily.value;
+      const elements = families[famKey];
+
+      selL.innerHTML = "";
+      selR.innerHTML = "";
+
+      elements.forEach((el, index) => {
+        const optL = document.createElement("option");
+        optL.value = el.sym;
+        optL.textContent = el.name;
+        if (index === 0) optL.selected = true;
+        selL.appendChild(optL);
+
+        const optR = document.createElement("option");
+        optR.value = el.sym;
+        optR.textContent = el.name;
+        if (index === elements.length - 1) optR.selected = true;
+        selR.appendChild(optR);
+      });
+
+      document.getElementById("massBadge").textContent = `Mass A = ${famKey}`;
+      updateComparison();
+    }
+
+    function updateComparison() {
+      const famKey = selFamily.value;
+      const elements = families[famKey];
+
+      const elL = elements.find(e => e.sym === selL.value);
+      const elR = elements.find(e => e.sym === selR.value);
+
+      if (!elL || !elR) return;
+
+      // Update Labels
+      document.getElementById("lblLeft").textContent = elL.sym;
+      document.getElementById("lblRight").textContent = elR.sym;
+
+      document.getElementById("nameLeft").textContent = elL.name;
+      document.getElementById("pLeft").textContent = elL.p;
+      document.getElementById("nLeft").textContent = elL.n;
+      document.getElementById("totLeft").textContent = elL.mass;
+
+      document.getElementById("nameRight").textContent = elR.name;
+      document.getElementById("pRight").textContent = elR.p;
+      document.getElementById("nRight").textContent = elR.n;
+      document.getElementById("totRight").textContent = elR.mass;
+
+      // Scale Animation - Since they are isobars, they have the exact same mass.
+      // However, to make it interactive, let's briefly tip the scale, then bring it back to a perfect balance (0deg) to show they are equal!
+      beam.style.transform = "rotate(3deg)";
+      setTimeout(() => {
+        beam.style.transform = "rotate(0deg)";
+      }, 400);
+    }
+
+    selFamily.addEventListener("change", populateElements);
+    selL.addEventListener("change", updateComparison);
+    selR.addEventListener("change", updateComparison);
+
+    // Init
+    populateElements();
+  });
+</script>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
