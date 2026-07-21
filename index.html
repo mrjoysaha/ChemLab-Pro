@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reagent — reaction predictor</title>
+<meta name="description" content="Combine any two elements or compounds and see the balanced reaction they form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" id="indicatorRail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+    <button type="button" class="drawer-link" id="gameMenuBtn">Game</button>
+  </div>
+</nav>
+
+<div class="modal-overlay" id="gameModalOverlay" hidden>
+  <div class="modal game-modal" id="gameModal" role="dialog" aria-modal="true" aria-labelledby="gameTitle">
+    <button class="modal-close" id="gameModalClose" aria-label="Close">✕</button>
+    <div class="game-head">
+      <span class="info-kicker">Mini game</span>
+      <h2 class="game-title" id="gameTitle">Tic Tac Toe</h2>
+    </div>
+
+    <div class="game-modes">
+      <button type="button" class="game-mode-btn active" data-mode="single">Single Player</button>
+      <button type="button" class="game-mode-btn" data-mode="two">Two Player</button>
+    </div>
+
+    <div class="game-status" id="gameStatus">Your turn — <span class="mark-label mark-label-x">X</span></div>
+
+    <div class="game-board-wrap" id="gameBoardWrap">
+      <div class="game-board" id="gameBoard"></div>
+      <svg class="win-line-svg" id="winLineSvg"></svg>
+    </div>
+
+    <div class="game-footer">
+      <div class="game-score">
+        <span><span class="mark-label mark-label-x">X</span> <span id="scoreX">0</span></span>
+        <span>Draws <span id="scoreD">0</span></span>
+        <span><span class="mark-label mark-label-o">O</span> <span id="scoreO">0</span></span>
+      </div>
+      <button type="button" class="predict-btn game-reset-btn" id="gameResetBtn">New round</button>
+    </div>
+  </div>
+</div>
+
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Reaction Predictor</span>
+    <h1>Combine any two.<br>See what forms.</h1>
+    <p class="lede">Pick two of the 118 elements, or a common acid, base, oxide, carbonate or salt — Reagent works out the product and balances the equation for you.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="equation-card" aria-label="Reaction input">
+    <div class="equation-bar">
+      <div class="field">
+        <label for="inputA">Reactant 1</label>
+        <input id="inputA" type="text" list="compoundList" placeholder="Zn" autocomplete="off" spellcheck="false">
+      </div>
+      <span class="operator">+</span>
+      <div class="field">
+        <label for="inputB">Reactant 2</label>
+        <input id="inputB" type="text" list="compoundList" placeholder="H2SO4" autocomplete="off" spellcheck="false">
+      </div>
+      <button id="predictBtn" class="predict-btn">Predict <span class="arrow">→</span></button>
+    </div>
+    <datalist id="compoundList"></datalist>
+    <p class="hint">Try <button class="hint-fill" data-a="Zn" data-b="H2SO4">Zn + H2SO4</button>, <button class="hint-fill" data-a="NaOH" data-b="HCl">NaOH + HCl</button>, or <button class="hint-fill" data-a="CaCO3" data-b="HCl">CaCO3 + HCl</button></p>
+  </section>
+
+  <section id="resultSection" class="result-card" hidden aria-live="polite">
+    <div class="result-strip" id="resultStrip"></div>
+    <div class="result-body">
+      <div class="result-equation" id="resultEquation"></div>
+      <div class="result-meta">
+        <span class="result-label" id="resultLabel"></span>
+        <p class="result-note" id="resultNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="picker-section">
+    <h2 class="section-title">Quick picks</h2>
+    <div class="picker-groups" id="pickerGroups"></div>
+  </section>
+
+  <section class="browser-section">
+    <details id="elementDetails">
+      <summary>Browse all 118 elements</summary>
+      <div class="element-grid" id="elementGrid"></div>
+    </details>
+  </section>
+
+  <section class="periodic-section">
+    <h2 class="section-title">Periodic table</h2>
+    <p class="periodic-hint">Tap any element for its full profile — mass, electron configuration, oxidation states, electronegativity, radius, ionization energy, and more.</p>
+    <div class="periodic-scroll">
+      <div class="periodic-grid" id="periodicGrid"></div>
+    </div>
+  </section>
+
+  <section class="scope-note">
+    <h2 class="section-title">What this covers</h2>
+    <ul>
+      <li>Reactive metal + acid → salt + hydrogen (using the standard reactivity series)</li>
+      <li>Reactive metal + water → metal hydroxide + hydrogen</li>
+      <li>Metal oxide + acid, acidic oxide + base, or metal oxide + acidic oxide → salt (+ water)</li>
+      <li>Acidic/basic oxide + water → acid or hydroxide</li>
+      <li>Acid + base → salt + water (neutralization)</li>
+      <li>Acid + carbonate/bicarbonate → salt + water + carbon dioxide</li>
+      <li>Metal + salt → single displacement, when the reactant metal is more reactive</li>
+      <li>Salt/carbonate/base + salt/carbonate/base → double displacement, when a precipitate forms (simplified solubility rules)</li>
+      <li>Metal + non-metal → direct combination into an ionic compound</li>
+      <li>Hydrocarbons and alcohols + O₂ → combustion (CO₂ + water), for any C/H/O fuel formula</li>
+      <li>A handful of named special cases: H₂ + O₂ → water, ammonia's weak-base equilibrium with water, the Haber process, and a few classic combinations</li>
+    </ul>
+    <p>It doesn't attempt full organic chemistry, redox half-equations, or every possible oxidation state — variable-valency metals (Fe, Cu, Sn, Pb, Cr, Mn, Co, Ni, Hg, Au, Ti) are covered with their two most common charges. Solubility rules are the simplified version taught at introductory level, not a complete Ksp treatment.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div class="modal-head">
+      <span class="modal-symbol" id="modalSymbol"></span>
+      <div>
+        <div class="modal-name" id="modalName"></div>
+        <div class="modal-cat" id="modalCat"></div>
+      </div>
+    </div>
+    <div class="modal-grid" id="modalGrid"></div>
+  </div>
+</div>
+
+<script src="chem.js"></script>
+<script src="periodic-data.js"></script>
+<script src="nav.js"></script>
+<script src="game.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
