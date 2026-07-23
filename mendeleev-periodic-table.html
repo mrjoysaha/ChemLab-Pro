@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mendeleev's Periodic Table — Reagent</title>
+<meta name="description" content="Mendeleev's arrangement of elements by atomic weight, and its predictions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+  </div>
+</nav>
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Periodic Table</span>
+    <h1>Mendeleev's Periodic Table</h1>
+    <p class="lede">Mendeleev's arrangement of elements by atomic weight, and its predictions.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <span class="info-kicker">Periodic Table</span>
+      <h2>Mendeleev's Periodic Table</h2>
+      <p>In 1869, Dmitri Mendeleev arranged the known elements by atomic weight into rows and columns so that elements with similar properties lined up in the same column. Where the pattern demanded an element nobody had discovered yet, he did something bold: he left a gap — and predicted, in detail, the properties the missing element would have.</p>
+
+      <h3 style="font-family:var(--sans); font-size:16px; margin:22px 0 4px;">The most famous prediction: "eka-silicon" → Germanium</h3>
+      <p>One gap sat just below silicon. Mendeleev named the missing element <strong>eka-silicon</strong> ("one-beyond-silicon" in Sanskrit-derived notation) and predicted its properties from the trend of its neighbors. Fifteen years later, in 1886, Clemens Winkler discovered <strong>germanium</strong> — and it matched almost exactly:</p>
+
+      <table class="data-table">
+        <caption>Predicted (eka-silicon) vs. actual (germanium)</caption>
+        <tr><th>Property</th><th>Predicted</th><th>Actual (Ge)</th></tr>
+        <tr><td>Atomic weight</td><td>72</td><td class="hl">72.6</td></tr>
+        <tr><td>Density</td><td>5.5 g/cm³</td><td class="hl">5.35 g/cm³</td></tr>
+        <tr><td>Formula of oxide</td><td>EsO₂ <span style="color:var(--ink-soft); font-family:var(--sans); font-size:12px;">(Es = eka-silicon)</span></td><td class="hl">GeO₂</td></tr>
+        <tr><td>Boiling point of chloride</td><td>&lt; 100°C</td><td class="hl">84°C (GeCl₄)</td></tr>
+      </table>
+
+      <p>That level of accuracy — from a gap in a table, years before the element existed in anyone's lab — is the single strongest piece of evidence that the periodic law was describing something real about atomic structure, not just a convenient filing system.</p>
+
+      <div class="info-placeholder">Mendeleev's table still had a flaw: it was ordered by atomic <em>weight</em>, which occasionally puts elements out of step with their actual chemical family. That gets fixed by ordering on atomic <em>number</em> instead — see Modern Periodic Table.</div>
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
