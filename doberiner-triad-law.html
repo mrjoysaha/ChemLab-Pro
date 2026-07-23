@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Döbereiner's Triad Law — Reagent</title>
+<meta name="description" content="The earliest attempt to group elements into triads by atomic weight.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Game</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <button type="button" id="gameMenuBtn">Tic Tac Toe</button>
+      </div></div>
+    </div>
+  </div>
+</nav>
+
+<div class="modal-overlay" id="gameModalOverlay" hidden>
+  <div class="modal game-modal" id="gameModal" role="dialog" aria-modal="true" aria-labelledby="gameTitle">
+    <button class="modal-close" id="gameModalClose" aria-label="Close">✕</button>
+    <div class="game-head">
+      <span class="info-kicker">Mini game</span>
+      <h2 class="game-title" id="gameTitle">Tic Tac Toe</h2>
+    </div>
+
+    <div class="game-modes">
+      <button type="button" class="game-mode-btn active" data-mode="single">Single Player</button>
+      <button type="button" class="game-mode-btn" data-mode="two">Two Player</button>
+    </div>
+
+    <div class="game-status" id="gameStatus">Your turn — <span class="mark-label mark-label-x">X</span></div>
+
+    <div class="game-board-wrap" id="gameBoardWrap">
+      <div class="game-board" id="gameBoard"></div>
+      <svg class="win-line-svg" id="winLineSvg"></svg>
+    </div>
+
+    <div class="game-footer">
+      <div class="game-score">
+        <span><span class="mark-label mark-label-x">X</span> <span id="scoreX">0</span></span>
+        <span>Draws <span id="scoreD">0</span></span>
+        <span><span class="mark-label mark-label-o">O</span> <span id="scoreO">0</span></span>
+      </div>
+      <button type="button" class="predict-btn game-reset-btn" id="gameResetBtn">New round</button>
+    </div>
+  </div>
+</div>
+
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Periodic Table</span>
+    <h1>Döbereiner's Triad Law</h1>
+    <p class="lede">The earliest attempt to group elements into triads by atomic weight.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <span class="info-kicker">Periodic Table</span>
+      <h2>Döbereiner's Triad Law</h2>
+      <p>In 1817, the German chemist Johann Wolfgang Döbereiner noticed that certain groups of three elements with similar chemical properties — which he called <strong>triads</strong> — showed a striking numerical pattern: the atomic mass of the middle element was close to the average of the other two. It was the first hint that atomic mass and chemical behavior were connected, decades before Mendeleev's periodic table.</p>
+
+      <h3 style="font-family:var(--sans); font-size:16px; margin:22px 0 4px;">Triad 1 — the alkali metals (Li, Na, K)</h3>
+      <p>Soft, highly reactive metals that each form a +1 ion.</p>
+      <table class="data-table">
+        <caption>Atomic mass (amu)</caption>
+        <tr><th>Element</th><th>Atomic mass</th></tr>
+        <tr><td>Lithium (Li)</td><td>6.94</td></tr>
+        <tr><td>Sodium (Na) — middle element</td><td class="hl">22.99 (actual)</td></tr>
+        <tr><td>Potassium (K)</td><td>39.10</td></tr>
+      </table>
+      <div class="result-line"><span class="lbl">Predicted Na</span> = (6.94 + 39.10) / 2 = <strong>23.02</strong></div>
+      <div class="result-line"><span class="lbl">Actual Na</span> = <strong>22.99</strong> &nbsp;·&nbsp; <span class="err">difference 0.03 amu (≈0.13% error)</span></div>
+      <p>A remarkably accurate prediction from nothing more than the two neighboring masses.</p>
+
+      <h3 style="font-family:var(--sans); font-size:16px; margin:26px 0 4px;">Triad 2 — the halogens (Cl, Br, I)</h3>
+      <p>Highly reactive nonmetals that each form salts with metals.</p>
+      <table class="data-table">
+        <caption>Atomic mass (amu)</caption>
+        <tr><th>Element</th><th>Atomic mass</th></tr>
+        <tr><td>Chlorine (Cl)</td><td>35.45</td></tr>
+        <tr><td>Bromine (Br) — middle element</td><td class="hl">79.90 (actual)</td></tr>
+        <tr><td>Iodine (I)</td><td>126.90</td></tr>
+      </table>
+      <div class="result-line"><span class="lbl">Predicted Br</span> = (35.45 + 126.90) / 2 = <strong>81.18</strong></div>
+      <div class="result-line"><span class="lbl">Actual Br</span> = <strong>79.90</strong> &nbsp;·&nbsp; <span class="err">difference 1.28 amu (≈1.6% error)</span></div>
+      <p>A slightly larger gap, but still a strong structural correlation — good enough to convince chemists that atomic mass wasn't arbitrary.</p>
+
+      <div class="info-placeholder">Döbereiner's law only worked for a handful of triads and broke down elsewhere — it was superseded by Newlands' Law of Octaves and then Mendeleev's periodic table, both covered elsewhere in this section.</div>
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isomer — Reagent</title>
+<meta name="description" content="Nuclei with the same atomic and mass number but different energy states.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="indicator-rail" aria-hidden="true"></div>
+
+<header class="top-nav">
+  <div class="top-nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" width="26" height="26" viewBox="0 0 44 44" aria-hidden="true">
+        <circle cx="22" cy="22" r="20" fill="none" stroke="var(--gold)" stroke-width="1.4" opacity="0.55"/>
+        <circle cx="22" cy="22" r="2.6" fill="var(--gold)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(0 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(60 22 22)"/>
+        <ellipse cx="22" cy="22" rx="16" ry="6.4" fill="none" stroke="var(--gold)" stroke-width="1.3" transform="rotate(120 22 22)"/>
+      </svg>
+      <span class="brand-name">Reagent</span>
+    </a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+<nav class="drawer" id="siteDrawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="drawer-title">Menu</span>
+    <button class="drawer-close" id="drawerCloseBtn" aria-label="Close menu">✕</button>
+  </div>
+  <div class="drawer-body">
+    <a href="index.html" class="drawer-link">Home</a>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Atomic Structure</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="electronic-configuration.html">Electronic Configuration</a>
+        <a href="subshell-orbital-concept.html">Subshell &amp; Orbital Concept</a>
+        <a href="atomic-number.html">Atomic Number</a>
+        <a href="isotope.html">Isotope</a>
+        <a href="isotone.html">Isotone</a>
+        <a href="isobar.html">Isobar</a>
+        <a href="isomer.html">Isomer</a>
+      </div></div>
+    </div>
+
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Periodic Table</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <a href="doberiner-triad-law.html">D&ouml;bereiner's Triad Law</a>
+        <a href="newland-octave-rule.html">Newland's Octave Rule</a>
+        <a href="mendeleev-periodic-table.html">Mendeleev's Periodic Table</a>
+        <a href="modern-periodic-table.html">Modern Periodic Table</a>
+      </div></div>
+    </div>
+
+    <a href="contact.html" class="drawer-link">Contact</a>
+    <div class="drawer-section">
+      <button class="drawer-section-toggle" aria-expanded="false">
+        <span>Game</span><span class="chev">⌄</span>
+      </button>
+      <div class="drawer-submenu-wrap"><div class="drawer-submenu">
+        <button type="button" id="gameMenuBtn">Tic Tac Toe</button>
+      </div></div>
+    </div>
+  </div>
+</nav>
+
+<div class="modal-overlay" id="gameModalOverlay" hidden>
+  <div class="modal game-modal" id="gameModal" role="dialog" aria-modal="true" aria-labelledby="gameTitle">
+    <button class="modal-close" id="gameModalClose" aria-label="Close">✕</button>
+    <div class="game-head">
+      <span class="info-kicker">Mini game</span>
+      <h2 class="game-title" id="gameTitle">Tic Tac Toe</h2>
+    </div>
+
+    <div class="game-modes">
+      <button type="button" class="game-mode-btn active" data-mode="single">Single Player</button>
+      <button type="button" class="game-mode-btn" data-mode="two">Two Player</button>
+    </div>
+
+    <div class="game-status" id="gameStatus">Your turn — <span class="mark-label mark-label-x">X</span></div>
+
+    <div class="game-board-wrap" id="gameBoardWrap">
+      <div class="game-board" id="gameBoard"></div>
+      <svg class="win-line-svg" id="winLineSvg"></svg>
+    </div>
+
+    <div class="game-footer">
+      <div class="game-score">
+        <span><span class="mark-label mark-label-x">X</span> <span id="scoreX">0</span></span>
+        <span>Draws <span id="scoreD">0</span></span>
+        <span><span class="mark-label mark-label-o">O</span> <span id="scoreO">0</span></span>
+      </div>
+      <button type="button" class="predict-btn game-reset-btn" id="gameResetBtn">New round</button>
+    </div>
+  </div>
+</div>
+
+
+<header class="site-header">
+  <div class="wrap">
+    <span class="eyebrow">Atomic Structure</span>
+    <h1>Isomer</h1>
+    <p class="lede">Nuclei with the same atomic and mass number but different energy states.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="info-card">
+    <div class="info-strip"></div>
+    <div class="info-body">
+      <span class="info-kicker">Atomic Structure</span>
+      <h2>Isomer</h2>
+      <p>A <strong>nuclear isomer</strong> is a nucleus with the same atomic number and the same mass number as another form of that nuclide, but sitting in a different, longer-lived nuclear energy state. Same protons, same neutrons, same element — just a nucleus temporarily "stuck" in an excited configuration before it settles down.</p>
+      <p>The most widely used example in medicine is Technetium-99m, where the "m" stands for <em>metastable</em>. It decays to ordinary Technetium-99 by releasing its excess energy as a gamma ray, without changing its atomic or mass number — a process called <strong>isomeric transition</strong>:</p>
+
+      <div class="rxn-block">
+        <span class="nuclide">
+          <span class="nuclide-affixes"><span class="nuclide-mass">99m</span><span class="nuclide-num">43</span></span>
+          <span class="nuclide-symbol">Tc</span>
+        </span>
+        <span class="rxn-arrow-wrap">
+          <span class="rxn-arrow-label">Isomeric Transition</span>
+          <span class="rxn-arrow">→</span>
+        </span>
+        <span class="nuclide">
+          <span class="nuclide-affixes"><span class="nuclide-mass">99</span><span class="nuclide-num">43</span></span>
+          <span class="nuclide-symbol">Tc</span>
+        </span>
+        <span style="margin-left:10px;">+&nbsp;γ</span>
+      </div>
+
+      <p>Because it emits gamma rays without emitting particles (no alpha or beta decay), Tc-99m passes cleanly out of the body while still being easy to detect from outside with a gamma camera — which is exactly why it's the workhorse isotope behind most nuclear medicine scans.</p>
+
+      <div class="info-placeholder">Isomers vs. isotopes vs. isobars vs. isotones are easy to mix up — see the other Atomic Structure pages in the menu for how each one differs.</div>
+    </div>
+  </section>
+  <a href="index.html" class="back-link">&larr; Back to home</a>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Reagent · a rule-based reaction predictor · built for learning, not lab work</div>
+</footer>
+
+<script src="nav.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
